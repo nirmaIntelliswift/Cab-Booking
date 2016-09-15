@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.menuDrawerHandler = [[CBMenuDrawerHandler alloc]init];
+    self.window.rootViewController = self.menuDrawerHandler.mainRootViewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -13,9 +13,23 @@
 		4EE7D9931D890A5D00B42C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7D9911D890A5D00B42C51 /* Main.storyboard */; };
 		4EE7D9951D890A5D00B42C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7D9941D890A5D00B42C51 /* Assets.xcassets */; };
 		4EE7D9981D890A5D00B42C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7D9961D890A5D00B42C51 /* LaunchScreen.storyboard */; };
+		4EE7D9A51D891AA900B42C51 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9A41D891AA900B42C51 /* SWRevealViewController.m */; };
+		4EE7D9AB1D891ABA00B42C51 /* CBMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9A81D891ABA00B42C51 /* CBMenuCell.m */; };
+		4EE7D9AC1D891ABA00B42C51 /* CBMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9AA1D891ABA00B42C51 /* CBMenuViewController.m */; };
+		4EE7D9B21D8920CA00B42C51 /* CBMenuDrawerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9B11D8920CA00B42C51 /* CBMenuDrawerHandler.m */; };
+		4EE7D9B61D89354000B42C51 /* CBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9B51D89354000B42C51 /* CBBaseViewController.m */; };
+		4EE7D9B91D89356F00B42C51 /* CBBaseUITableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9B81D89356F00B42C51 /* CBBaseUITableCell.m */; };
+		4EE7D9BC1D894DE800B42C51 /* CBUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9BB1D894DE800B42C51 /* CBUILabel.m */; };
+		4EE7D9C21D8955C000B42C51 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7D9BE1D8955C000B42C51 /* SF-UI-Text-Light.otf */; };
+		4EE7D9C31D8955C000B42C51 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7D9BF1D8955C000B42C51 /* SF-UI-Text-Medium.otf */; };
+		4EE7D9C41D8955C000B42C51 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7D9C01D8955C000B42C51 /* SF-UI-Text-Regular.otf */; };
+		4EE7D9C51D8955C000B42C51 /* SFUIDisplay-Ultralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7D9C11D8955C000B42C51 /* SFUIDisplay-Ultralight.ttf */; };
+		4EE7D9C91D895B7200B42C51 /* CBMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9C81D895B7200B42C51 /* CBMenuModel.m */; };
+		907EAFFF9EFEC00F6EC0DAA5 /* libPods-CabBooking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6383A49BD17FD123BD455B71 /* libPods-CabBooking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186944CF157339C6A791E137 /* Pods-CabBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CabBooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-CabBooking/Pods-CabBooking.release.xcconfig"; sourceTree = "<group>"; };
 		4EE7D9851D890A5D00B42C51 /* CabBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE7D9891D890A5D00B42C51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EE7D98B1D890A5D00B42C51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +40,29 @@
 		4EE7D9941D890A5D00B42C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EE7D9971D890A5D00B42C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EE7D9991D890A5D00B42C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE7D9A31D891AA900B42C51 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		4EE7D9A41D891AA900B42C51 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4EE7D9A71D891ABA00B42C51 /* CBMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMenuCell.h; sourceTree = "<group>"; };
+		4EE7D9A81D891ABA00B42C51 /* CBMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuCell.m; sourceTree = "<group>"; };
+		4EE7D9A91D891ABA00B42C51 /* CBMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMenuViewController.h; sourceTree = "<group>"; };
+		4EE7D9AA1D891ABA00B42C51 /* CBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuViewController.m; sourceTree = "<group>"; };
+		4EE7D9B01D8920CA00B42C51 /* CBMenuDrawerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMenuDrawerHandler.h; sourceTree = "<group>"; };
+		4EE7D9B11D8920CA00B42C51 /* CBMenuDrawerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuDrawerHandler.m; sourceTree = "<group>"; };
+		4EE7D9B41D89354000B42C51 /* CBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBaseViewController.h; sourceTree = "<group>"; };
+		4EE7D9B51D89354000B42C51 /* CBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBaseViewController.m; sourceTree = "<group>"; };
+		4EE7D9B71D89356F00B42C51 /* CBBaseUITableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBaseUITableCell.h; sourceTree = "<group>"; };
+		4EE7D9B81D89356F00B42C51 /* CBBaseUITableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBaseUITableCell.m; sourceTree = "<group>"; };
+		4EE7D9BA1D894DE800B42C51 /* CBUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUILabel.h; sourceTree = "<group>"; };
+		4EE7D9BB1D894DE800B42C51 /* CBUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUILabel.m; sourceTree = "<group>"; };
+		4EE7D9BE1D8955C000B42C51 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
+		4EE7D9BF1D8955C000B42C51 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
+		4EE7D9C01D8955C000B42C51 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
+		4EE7D9C11D8955C000B42C51 /* SFUIDisplay-Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Ultralight.ttf"; sourceTree = "<group>"; };
+		4EE7D9C61D89568000B42C51 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4EE7D9C71D895B7200B42C51 /* CBMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMenuModel.h; sourceTree = "<group>"; };
+		4EE7D9C81D895B7200B42C51 /* CBMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuModel.m; sourceTree = "<group>"; };
+		6383A49BD17FD123BD455B71 /* libPods-CabBooking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CabBooking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95635C5A6E76E80B52BFB0C5 /* Pods-CabBooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CabBooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CabBooking/Pods-CabBooking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +70,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907EAFFF9EFEC00F6EC0DAA5 /* libPods-CabBooking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0159B186348214BAAE1C50D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6383A49BD17FD123BD455B71 /* libPods-CabBooking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E37A0B9934276E167678807 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95635C5A6E76E80B52BFB0C5 /* Pods-CabBooking.debug.xcconfig */,
+				186944CF157339C6A791E137 /* Pods-CabBooking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4EE7D97C1D890A5D00B42C51 = {
 			isa = PBXGroup;
 			children = (
 				4EE7D9871D890A5D00B42C51 /* CabBooking */,
 				4EE7D9861D890A5D00B42C51 /* Products */,
+				4E37A0B9934276E167678807 /* Pods */,
+				0159B186348214BAAE1C50D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +115,13 @@
 		4EE7D9871D890A5D00B42C51 /* CabBooking */ = {
 			isa = PBXGroup;
 			children = (
-				4EE7D98B1D890A5D00B42C51 /* AppDelegate.h */,
-				4EE7D98C1D890A5D00B42C51 /* AppDelegate.m */,
-				4EE7D98E1D890A5D00B42C51 /* ViewController.h */,
-				4EE7D98F1D890A5D00B42C51 /* ViewController.m */,
+				4EE7D9C61D89568000B42C51 /* Constants.h */,
+				4EE7D9BD1D8955C000B42C51 /* Fonts */,
+				4EE7D9B31D89352800B42C51 /* BaseClasses */,
+				4EE7D9A61D891ABA00B42C51 /* Menu */,
+				4EE7D9A11D891AA900B42C51 /* ThirdPartyLibs */,
+				4EE7D9A01D891A8300B42C51 /* ViewController */,
+				4EE7D99F1D891A7000B42C51 /* Appdelegate */,
 				4EE7D9911D890A5D00B42C51 /* Main.storyboard */,
 				4EE7D9941D890A5D00B42C51 /* Assets.xcassets */,
 				4EE7D9961D890A5D00B42C51 /* LaunchScreen.storyboard */,
@@ -79,6 +139,80 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4EE7D99F1D891A7000B42C51 /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D98B1D890A5D00B42C51 /* AppDelegate.h */,
+				4EE7D98C1D890A5D00B42C51 /* AppDelegate.m */,
+			);
+			name = Appdelegate;
+			sourceTree = "<group>";
+		};
+		4EE7D9A01D891A8300B42C51 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D98E1D890A5D00B42C51 /* ViewController.h */,
+				4EE7D98F1D890A5D00B42C51 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4EE7D9A11D891AA900B42C51 /* ThirdPartyLibs */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D9A21D891AA900B42C51 /* SWRevealViewController */,
+			);
+			path = ThirdPartyLibs;
+			sourceTree = "<group>";
+		};
+		4EE7D9A21D891AA900B42C51 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D9A31D891AA900B42C51 /* SWRevealViewController.h */,
+				4EE7D9A41D891AA900B42C51 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		4EE7D9A61D891ABA00B42C51 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D9A71D891ABA00B42C51 /* CBMenuCell.h */,
+				4EE7D9A81D891ABA00B42C51 /* CBMenuCell.m */,
+				4EE7D9A91D891ABA00B42C51 /* CBMenuViewController.h */,
+				4EE7D9AA1D891ABA00B42C51 /* CBMenuViewController.m */,
+				4EE7D9B01D8920CA00B42C51 /* CBMenuDrawerHandler.h */,
+				4EE7D9B11D8920CA00B42C51 /* CBMenuDrawerHandler.m */,
+				4EE7D9C71D895B7200B42C51 /* CBMenuModel.h */,
+				4EE7D9C81D895B7200B42C51 /* CBMenuModel.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		4EE7D9B31D89352800B42C51 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D9B41D89354000B42C51 /* CBBaseViewController.h */,
+				4EE7D9B51D89354000B42C51 /* CBBaseViewController.m */,
+				4EE7D9B71D89356F00B42C51 /* CBBaseUITableCell.h */,
+				4EE7D9B81D89356F00B42C51 /* CBBaseUITableCell.m */,
+				4EE7D9BA1D894DE800B42C51 /* CBUILabel.h */,
+				4EE7D9BB1D894DE800B42C51 /* CBUILabel.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		4EE7D9BD1D8955C000B42C51 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D9BE1D8955C000B42C51 /* SF-UI-Text-Light.otf */,
+				4EE7D9BF1D8955C000B42C51 /* SF-UI-Text-Medium.otf */,
+				4EE7D9C01D8955C000B42C51 /* SF-UI-Text-Regular.otf */,
+				4EE7D9C11D8955C000B42C51 /* SFUIDisplay-Ultralight.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EE7D99C1D890A5D00B42C51 /* Build configuration list for PBXNativeTarget "CabBooking" */;
 			buildPhases = (
+				98247411D31CD60963B5FB53 /* [CP] Check Pods Manifest.lock */,
 				4EE7D9811D890A5D00B42C51 /* Sources */,
 				4EE7D9821D890A5D00B42C51 /* Frameworks */,
 				4EE7D9831D890A5D00B42C51 /* Resources */,
+				89701CC8625569831D43A5B9 /* [CP] Embed Pods Frameworks */,
+				A197A484DB81130340719506 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -105,6 +242,7 @@
 		4EE7D97D1D890A5D00B42C51 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CB;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Nirma;
 				TargetAttributes = {
@@ -138,20 +276,80 @@
 			files = (
 				4EE7D9981D890A5D00B42C51 /* LaunchScreen.storyboard in Resources */,
 				4EE7D9951D890A5D00B42C51 /* Assets.xcassets in Resources */,
+				4EE7D9C41D8955C000B42C51 /* SF-UI-Text-Regular.otf in Resources */,
+				4EE7D9C21D8955C000B42C51 /* SF-UI-Text-Light.otf in Resources */,
+				4EE7D9C51D8955C000B42C51 /* SFUIDisplay-Ultralight.ttf in Resources */,
+				4EE7D9C31D8955C000B42C51 /* SF-UI-Text-Medium.otf in Resources */,
 				4EE7D9931D890A5D00B42C51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89701CC8625569831D43A5B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CabBooking/Pods-CabBooking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98247411D31CD60963B5FB53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A197A484DB81130340719506 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CabBooking/Pods-CabBooking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EE7D9811D890A5D00B42C51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE7D9B61D89354000B42C51 /* CBBaseViewController.m in Sources */,
+				4EE7D9AC1D891ABA00B42C51 /* CBMenuViewController.m in Sources */,
 				4EE7D9901D890A5D00B42C51 /* ViewController.m in Sources */,
 				4EE7D98D1D890A5D00B42C51 /* AppDelegate.m in Sources */,
 				4EE7D98A1D890A5D00B42C51 /* main.m in Sources */,
+				4EE7D9B21D8920CA00B42C51 /* CBMenuDrawerHandler.m in Sources */,
+				4EE7D9C91D895B7200B42C51 /* CBMenuModel.m in Sources */,
+				4EE7D9B91D89356F00B42C51 /* CBBaseUITableCell.m in Sources */,
+				4EE7D9AB1D891ABA00B42C51 /* CBMenuCell.m in Sources */,
+				4EE7D9A51D891AA900B42C51 /* SWRevealViewController.m in Sources */,
+				4EE7D9BC1D894DE800B42C51 /* CBUILabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +459,7 @@
 		};
 		4EE7D99D1D890A5D00B42C51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95635C5A6E76E80B52BFB0C5 /* Pods-CabBooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CabBooking/Info.plist;
@@ -272,6 +471,7 @@
 		};
 		4EE7D99E1D890A5D00B42C51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 186944CF157339C6A791E137 /* Pods-CabBooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CabBooking/Info.plist;
@@ -300,6 +500,7 @@
 				4EE7D99E1D890A5D00B42C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
