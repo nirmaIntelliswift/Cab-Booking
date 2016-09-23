@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CBMapHandler.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [CBMapHandler registerGoogleApiKey];
     self.menuDrawerHandler = [[CBMenuDrawerHandler alloc]init];
     self.window.rootViewController = self.menuDrawerHandler.mainRootViewController;
     [self.window makeKeyAndVisible];

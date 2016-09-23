@@ -13,5 +13,6 @@
 }
 
 @property (strong, nonatomic)  UITableView *tableview;
+@property (strong, nonatomic)  UIView *viewHeaderView;
 
 @end

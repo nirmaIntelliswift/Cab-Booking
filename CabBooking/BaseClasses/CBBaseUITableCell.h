@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <PureLayout/PureLayout.h>
+#import "Constants.h"
+#import "CBSepratorLine.h"
 @interface CBBaseUITableCell : UITableViewCell
-
+@property(nonatomic ,strong)CBSepratorLine *viewSepratorLine;
 -(void)setData:(id)data;
-
+-(void)addHorizonatalSeprator;
 @end

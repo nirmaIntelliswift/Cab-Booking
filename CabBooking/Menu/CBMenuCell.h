@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CBBaseUITableCell.h"
-#import <PureLayout/PureLayout.h>
-#import "Constants.h"
+
 @interface CBMenuCell : CBBaseUITableCell
 
 @property(nonatomic ,strong)UIImageView *imgItem;

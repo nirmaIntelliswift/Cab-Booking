@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>CabBookingOClint.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4EAC9BDF1D93D8B00078AEDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4EE7D9841D890A5D00B42C51</key>
 		<dict>
 			<key>primary</key>

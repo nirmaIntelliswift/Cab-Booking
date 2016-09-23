@@ -13,4 +13,5 @@
 @property(nonatomic,strong)NSString *itemImageName;
 @property(nonatomic,strong)NSString *itemName;
 @property(nonatomic,assign)int itemAmount;
+@property(nonatomic,assign)BOOL isSelected;
 @end

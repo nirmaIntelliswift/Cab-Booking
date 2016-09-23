@@ -39,16 +39,17 @@
         [_imgItem autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:LEFT_MARGIN];
         
         [_lblItemName autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-        [_lblItemName autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_imgItem withOffset:10];
+        [_lblItemName autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_imgItem withOffset:13];
         
         [_lblItemAmount autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
         [_lblItemAmount autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:LEFT_MARGIN];
         _lblItemName.text = @"Book Your Ride";
        // _lblItemAmount.text = @"500";
         
-        [_lblItemName setFont:[UIFont fontWithName:FONT_MEDIUM size:14]];
+        [_lblItemName setFont:[UIFont fontWithName:SANFRANSISCO_REGULAR size:16]];
         [_lblItemAmount setFont:[UIFont fontWithName:FONT_MEDIUM size:12]];
-        _lblItemName.textColor = _lblItemAmount.textColor = [UIColor grayColor];
+        _lblItemName.textColor = [UIColor blackColor];;
+        _lblItemAmount.textColor = [UIColor grayColor];
     }
     return self;
 }
@@ -58,5 +59,11 @@
     
     //_lblItemAmount.text = [NSString stringWithFormat:@"%d",item.itemAmount];
     _imgItem.image = [UIImage imageNamed:item.itemImageName];
+    _imgItem.layer.borderColor = [UIColor clearColor].CGColor;
+    _imgItem.layer.borderWidth = 0.0;
+    if (item.isSelected) {
+        _imgItem.layer.borderColor = [UIColor redColor].CGColor;
+        _imgItem.layer.borderWidth = 1;
+    }
 }
 @end

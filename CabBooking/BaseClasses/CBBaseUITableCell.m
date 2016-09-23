@@ -19,7 +19,14 @@
 
     // Configure the view for the selected state
 }
-
+-(void)addHorizonatalSeprator{
+     _viewSepratorLine = [[CBSepratorLine alloc]init];
+     [self.contentView addSubview:_viewSepratorLine];
+    [_viewSepratorLine autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
+    [_viewSepratorLine autoPinEdgeToSuperviewEdge:ALEdgeLeading];
+    [_viewSepratorLine autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [_viewSepratorLine autoSetDimension:ALDimensionHeight toSize:0.5];
+}
 -(void)setData:(id)data{
     
 }

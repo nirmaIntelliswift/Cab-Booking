@@ -14,4 +14,5 @@
 @property(nonatomic,strong)SWRevealViewController *mainRootViewController;
 //@property(nonatomic,strong)SlideMenuController *mainRootViewController;
 
++(UINavigationController *)getViewControllerForIndex:(int)tableIndex;
 @end

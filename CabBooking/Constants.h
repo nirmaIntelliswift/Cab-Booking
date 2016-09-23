@@ -5,6 +5,7 @@
 //  Created by Nirma on 09/03/16.
 //  Copyright © 2016 Intelliswift Software Pvt. Ltd. All rights reserved.
 //
+#import "CBColors.h"
 
 #ifndef Constants_h
 #define Constants_h
@@ -19,7 +20,10 @@
 #define FONT_MEDIUM SANFRANSISCO_MEDIUM
 #define FONT_ULTRALIGHT SANFRANSISCO_ULTRALIGHT
 
-
+#define TITLE_OFFERS_AND_RIDES @"Offers & Free Rides"
+#define TITLE_EMERGENCY_CONTACTS @"Emergency Contacts"
+#define TITLE_MY_RIDES @"My Rides"
+#define TITLE_BOOK_MY_RIDE @"Book My Ride"
 
 #define UIColorFromRGB(rgbValue) \
 [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \

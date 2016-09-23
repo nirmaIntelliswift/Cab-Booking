@@ -6,7 +6,42 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		4EAC9BDF1D93D8B00078AEDE /* CabBookingOClint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4EAC9BE21D93D8B10078AEDE /* Build configuration list for PBXAggregateTarget "CabBookingOClint" */;
+			buildPhases = (
+				4EAC9BE31D93D8DF0078AEDE /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = CabBookingOClint;
+			productName = CabBookingOClint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		4E2A0F1D1D94CA770069836D /* CBCarDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A0F1C1D94CA770069836D /* CBCarDetailView.m */; };
+		4E2A0F201D94CA870069836D /* CBDriverDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A0F1F1D94CA870069836D /* CBDriverDetailView.m */; };
+		4E2A0F241D94CEAE0069836D /* CBButtonWithLeftImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A0F231D94CEAE0069836D /* CBButtonWithLeftImage.m */; };
+		4E2A0F291D94E2EF0069836D /* CBBaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A0F281D94E2EF0069836D /* CBBaseCollectionCell.m */; };
+		4E2A0F2C1D94E3520069836D /* CBCarCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A0F2B1D94E3520069836D /* CBCarCategoryCell.m */; };
+		4E52E4831D8F9D2800C0B890 /* CBBaseFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E4821D8F9D2800C0B890 /* CBBaseFrontViewController.m */; };
+		4E52E4881D8FA50200C0B890 /* CBEmergencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E4871D8FA50200C0B890 /* CBEmergencyViewController.m */; };
+		4E52E48B1D8FAFD400C0B890 /* CBEmeregencyContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E48A1D8FAFD400C0B890 /* CBEmeregencyContactCell.m */; };
+		4E52E48E1D8FB53B00C0B890 /* CBSepratorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E48D1D8FB53B00C0B890 /* CBSepratorLine.m */; };
+		4E52E4921D8FB7B500C0B890 /* CBOffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E4911D8FB7B500C0B890 /* CBOffersViewController.m */; };
+		4E52E4D51D8FE45F00C0B890 /* CBBaseFrontTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E4D41D8FE45F00C0B890 /* CBBaseFrontTableController.m */; };
+		4E52E4D81D8FE5B300C0B890 /* CBOffersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E4D71D8FE5B300C0B890 /* CBOffersCell.m */; };
+		4E52E4DC1D8FE75400C0B890 /* CBUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E52E4DB1D8FE75400C0B890 /* CBUtility.m */; };
+		4E6ACD4B1D8A585100827ECB /* CBMenuHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6ACD4A1D8A585100827ECB /* CBMenuHeader.m */; };
+		4E7560061D923FE600E86D44 /* CBMapHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7560051D923FE600E86D44 /* CBMapHandler.m */; };
+		4E7560091D92405800E86D44 /* CBBookMyRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7560081D92405800E86D44 /* CBBookMyRideViewController.m */; };
+		4E75600C1D927F2400E86D44 /* CBMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E75600B1D927F2400E86D44 /* CBMapView.m */; };
+		4E7560131D929DFF00E86D44 /* CBBookMyRideFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7560121D929DFF00E86D44 /* CBBookMyRideFooterView.m */; };
+		4E7E8D331D9110CE00D23362 /* CBMyRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E8D321D9110CE00D23362 /* CBMyRideViewController.m */; };
+		4E7E8D361D91111F00D23362 /* CBMyRideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E8D351D91111F00D23362 /* CBMyRideCell.m */; };
+		4EAC9BDE1D93AA930078AEDE /* Testing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC9BDD1D93AA930078AEDE /* Testing.xib */; };
 		4EE7D98A1D890A5D00B42C51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D9891D890A5D00B42C51 /* main.m */; };
 		4EE7D98D1D890A5D00B42C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D98C1D890A5D00B42C51 /* AppDelegate.m */; };
 		4EE7D9901D890A5D00B42C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7D98F1D890A5D00B42C51 /* ViewController.m */; };
@@ -30,6 +65,48 @@
 
 /* Begin PBXFileReference section */
 		186944CF157339C6A791E137 /* Pods-CabBooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CabBooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-CabBooking/Pods-CabBooking.release.xcconfig"; sourceTree = "<group>"; };
+		4E2A0F1B1D94CA770069836D /* CBCarDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCarDetailView.h; path = ../CBCarDetailView.h; sourceTree = "<group>"; };
+		4E2A0F1C1D94CA770069836D /* CBCarDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCarDetailView.m; path = ../CBCarDetailView.m; sourceTree = "<group>"; };
+		4E2A0F1E1D94CA870069836D /* CBDriverDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBDriverDetailView.h; path = ../CBDriverDetailView.h; sourceTree = "<group>"; };
+		4E2A0F1F1D94CA870069836D /* CBDriverDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBDriverDetailView.m; path = ../CBDriverDetailView.m; sourceTree = "<group>"; };
+		4E2A0F221D94CEAE0069836D /* CBButtonWithLeftImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBButtonWithLeftImage.h; sourceTree = "<group>"; };
+		4E2A0F231D94CEAE0069836D /* CBButtonWithLeftImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBButtonWithLeftImage.m; sourceTree = "<group>"; };
+		4E2A0F271D94E2EF0069836D /* CBBaseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBaseCollectionCell.h; sourceTree = "<group>"; };
+		4E2A0F281D94E2EF0069836D /* CBBaseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBaseCollectionCell.m; sourceTree = "<group>"; };
+		4E2A0F2A1D94E3520069836D /* CBCarCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCarCategoryCell.h; sourceTree = "<group>"; };
+		4E2A0F2B1D94E3520069836D /* CBCarCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCarCategoryCell.m; sourceTree = "<group>"; };
+		4E52E4811D8F9D2800C0B890 /* CBBaseFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBaseFrontViewController.h; path = ../CBBaseFrontViewController.h; sourceTree = "<group>"; };
+		4E52E4821D8F9D2800C0B890 /* CBBaseFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBBaseFrontViewController.m; path = ../CBBaseFrontViewController.m; sourceTree = "<group>"; };
+		4E52E4861D8FA50200C0B890 /* CBEmergencyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEmergencyViewController.h; sourceTree = "<group>"; };
+		4E52E4871D8FA50200C0B890 /* CBEmergencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEmergencyViewController.m; sourceTree = "<group>"; };
+		4E52E4891D8FAFD400C0B890 /* CBEmeregencyContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEmeregencyContactCell.h; sourceTree = "<group>"; };
+		4E52E48A1D8FAFD400C0B890 /* CBEmeregencyContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEmeregencyContactCell.m; sourceTree = "<group>"; };
+		4E52E48C1D8FB53B00C0B890 /* CBSepratorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBSepratorLine.h; path = ../CBSepratorLine.h; sourceTree = "<group>"; };
+		4E52E48D1D8FB53B00C0B890 /* CBSepratorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBSepratorLine.m; path = ../CBSepratorLine.m; sourceTree = "<group>"; };
+		4E52E4901D8FB7B500C0B890 /* CBOffersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBOffersViewController.h; sourceTree = "<group>"; };
+		4E52E4911D8FB7B500C0B890 /* CBOffersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBOffersViewController.m; sourceTree = "<group>"; };
+		4E52E4D31D8FE45F00C0B890 /* CBBaseFrontTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBaseFrontTableController.h; path = ../CBBaseFrontTableController.h; sourceTree = "<group>"; };
+		4E52E4D41D8FE45F00C0B890 /* CBBaseFrontTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBBaseFrontTableController.m; path = ../CBBaseFrontTableController.m; sourceTree = "<group>"; };
+		4E52E4D61D8FE5B300C0B890 /* CBOffersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBOffersCell.h; sourceTree = "<group>"; };
+		4E52E4D71D8FE5B300C0B890 /* CBOffersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBOffersCell.m; sourceTree = "<group>"; };
+		4E52E4DA1D8FE75400C0B890 /* CBUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUtility.h; sourceTree = "<group>"; };
+		4E52E4DB1D8FE75400C0B890 /* CBUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUtility.m; sourceTree = "<group>"; };
+		4E6ACD491D8A585100827ECB /* CBMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMenuHeader.h; sourceTree = "<group>"; };
+		4E6ACD4A1D8A585100827ECB /* CBMenuHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuHeader.m; sourceTree = "<group>"; };
+		4E6ACD4C1D8A713500827ECB /* CBColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBColors.h; path = ../CBColors.h; sourceTree = "<group>"; };
+		4E7560041D923FE600E86D44 /* CBMapHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMapHandler.h; sourceTree = "<group>"; };
+		4E7560051D923FE600E86D44 /* CBMapHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMapHandler.m; sourceTree = "<group>"; };
+		4E7560071D92405800E86D44 /* CBBookMyRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBookMyRideViewController.h; path = ../GoogleMaps/CBBookMyRideViewController.h; sourceTree = "<group>"; };
+		4E7560081D92405800E86D44 /* CBBookMyRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBBookMyRideViewController.m; path = ../GoogleMaps/CBBookMyRideViewController.m; sourceTree = "<group>"; };
+		4E75600A1D927F2400E86D44 /* CBMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMapView.h; sourceTree = "<group>"; };
+		4E75600B1D927F2400E86D44 /* CBMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMapView.m; sourceTree = "<group>"; };
+		4E7560111D929DFF00E86D44 /* CBBookMyRideFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBookMyRideFooterView.h; path = ../CBBookMyRideFooterView.h; sourceTree = "<group>"; };
+		4E7560121D929DFF00E86D44 /* CBBookMyRideFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBBookMyRideFooterView.m; path = ../CBBookMyRideFooterView.m; sourceTree = "<group>"; };
+		4E7E8D311D9110CE00D23362 /* CBMyRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMyRideViewController.h; sourceTree = "<group>"; };
+		4E7E8D321D9110CE00D23362 /* CBMyRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMyRideViewController.m; sourceTree = "<group>"; };
+		4E7E8D341D91111F00D23362 /* CBMyRideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMyRideCell.h; sourceTree = "<group>"; };
+		4E7E8D351D91111F00D23362 /* CBMyRideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMyRideCell.m; sourceTree = "<group>"; };
+		4EAC9BDD1D93AA930078AEDE /* Testing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Testing.xib; sourceTree = "<group>"; };
 		4EE7D9851D890A5D00B42C51 /* CabBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CabBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE7D9891D890A5D00B42C51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EE7D98B1D890A5D00B42C51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,17 +125,17 @@
 		4EE7D9AA1D891ABA00B42C51 /* CBMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuViewController.m; sourceTree = "<group>"; };
 		4EE7D9B01D8920CA00B42C51 /* CBMenuDrawerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMenuDrawerHandler.h; sourceTree = "<group>"; };
 		4EE7D9B11D8920CA00B42C51 /* CBMenuDrawerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuDrawerHandler.m; sourceTree = "<group>"; };
-		4EE7D9B41D89354000B42C51 /* CBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBaseViewController.h; sourceTree = "<group>"; };
-		4EE7D9B51D89354000B42C51 /* CBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBaseViewController.m; sourceTree = "<group>"; };
-		4EE7D9B71D89356F00B42C51 /* CBBaseUITableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBaseUITableCell.h; sourceTree = "<group>"; };
-		4EE7D9B81D89356F00B42C51 /* CBBaseUITableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBaseUITableCell.m; sourceTree = "<group>"; };
-		4EE7D9BA1D894DE800B42C51 /* CBUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUILabel.h; sourceTree = "<group>"; };
-		4EE7D9BB1D894DE800B42C51 /* CBUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUILabel.m; sourceTree = "<group>"; };
+		4EE7D9B41D89354000B42C51 /* CBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBaseViewController.h; path = ../CBBaseViewController.h; sourceTree = "<group>"; };
+		4EE7D9B51D89354000B42C51 /* CBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBBaseViewController.m; path = ../CBBaseViewController.m; sourceTree = "<group>"; };
+		4EE7D9B71D89356F00B42C51 /* CBBaseUITableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBaseUITableCell.h; path = ../CBBaseUITableCell.h; sourceTree = "<group>"; };
+		4EE7D9B81D89356F00B42C51 /* CBBaseUITableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBBaseUITableCell.m; path = ../CBBaseUITableCell.m; sourceTree = "<group>"; };
+		4EE7D9BA1D894DE800B42C51 /* CBUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBUILabel.h; path = ../CBUILabel.h; sourceTree = "<group>"; };
+		4EE7D9BB1D894DE800B42C51 /* CBUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBUILabel.m; path = ../CBUILabel.m; sourceTree = "<group>"; };
 		4EE7D9BE1D8955C000B42C51 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
 		4EE7D9BF1D8955C000B42C51 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
 		4EE7D9C01D8955C000B42C51 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
 		4EE7D9C11D8955C000B42C51 /* SFUIDisplay-Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Ultralight.ttf"; sourceTree = "<group>"; };
-		4EE7D9C61D89568000B42C51 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4EE7D9C61D89568000B42C51 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
 		4EE7D9C71D895B7200B42C51 /* CBMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMenuModel.h; sourceTree = "<group>"; };
 		4EE7D9C81D895B7200B42C51 /* CBMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMenuModel.m; sourceTree = "<group>"; };
 		6383A49BD17FD123BD455B71 /* libPods-CabBooking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CabBooking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +162,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4E2A0F211D94CE790069836D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				4E2A0F221D94CEAE0069836D /* CBButtonWithLeftImage.h */,
+				4E2A0F231D94CEAE0069836D /* CBButtonWithLeftImage.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		4E2A0F251D94E1190069836D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E2A0F1B1D94CA770069836D /* CBCarDetailView.h */,
+				4E2A0F1C1D94CA770069836D /* CBCarDetailView.m */,
+				4E2A0F1E1D94CA870069836D /* CBDriverDetailView.h */,
+				4E2A0F1F1D94CA870069836D /* CBDriverDetailView.m */,
+				4E2A0F2A1D94E3520069836D /* CBCarCategoryCell.h */,
+				4E2A0F2B1D94E3520069836D /* CBCarCategoryCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4E2A0F261D94E1390069836D /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				4E7560111D929DFF00E86D44 /* CBBookMyRideFooterView.h */,
+				4E7560121D929DFF00E86D44 /* CBBookMyRideFooterView.m */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
 		4E37A0B9934276E167678807 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +202,120 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4E52E4851D8FA4D600C0B890 /* EmergencyContacts */ = {
+			isa = PBXGroup;
+			children = (
+				4E52E4861D8FA50200C0B890 /* CBEmergencyViewController.h */,
+				4E52E4871D8FA50200C0B890 /* CBEmergencyViewController.m */,
+				4E52E4891D8FAFD400C0B890 /* CBEmeregencyContactCell.h */,
+				4E52E48A1D8FAFD400C0B890 /* CBEmeregencyContactCell.m */,
+			);
+			name = EmergencyContacts;
+			path = ../../EmergencyContacts;
+			sourceTree = "<group>";
+		};
+		4E52E48F1D8FB78B00C0B890 /* Offers & Free Rides */ = {
+			isa = PBXGroup;
+			children = (
+				4E52E4901D8FB7B500C0B890 /* CBOffersViewController.h */,
+				4E52E4911D8FB7B500C0B890 /* CBOffersViewController.m */,
+				4E52E4D61D8FE5B300C0B890 /* CBOffersCell.h */,
+				4E52E4D71D8FE5B300C0B890 /* CBOffersCell.m */,
+			);
+			name = "Offers & Free Rides";
+			path = "../Offers & Free Rides";
+			sourceTree = "<group>";
+		};
+		4E52E4D91D8FE74100C0B890 /* Utilty */ = {
+			isa = PBXGroup;
+			children = (
+				4E6ACD4C1D8A713500827ECB /* CBColors.h */,
+				4EE7D9C61D89568000B42C51 /* Constants.h */,
+				4E52E4DA1D8FE75400C0B890 /* CBUtility.h */,
+				4E52E4DB1D8FE75400C0B890 /* CBUtility.m */,
+			);
+			path = Utilty;
+			sourceTree = "<group>";
+		};
+		4E7560031D92392600E86D44 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				4E7560041D923FE600E86D44 /* CBMapHandler.h */,
+				4E7560051D923FE600E86D44 /* CBMapHandler.m */,
+				4E75600A1D927F2400E86D44 /* CBMapView.h */,
+				4E75600B1D927F2400E86D44 /* CBMapView.m */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		4E75600D1D929DAC00E86D44 /* BookMyRide */ = {
+			isa = PBXGroup;
+			children = (
+				4E2A0F261D94E1390069836D /* FooterView */,
+				4E2A0F251D94E1190069836D /* Views */,
+				4E7560071D92405800E86D44 /* CBBookMyRideViewController.h */,
+				4E7560081D92405800E86D44 /* CBBookMyRideViewController.m */,
+			);
+			name = BookMyRide;
+			path = ../BookMyRide;
+			sourceTree = "<group>";
+		};
+		4E7E8D2A1D910FD600D23362 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E52E4D31D8FE45F00C0B890 /* CBBaseFrontTableController.h */,
+				4E52E4D41D8FE45F00C0B890 /* CBBaseFrontTableController.m */,
+				4E52E4811D8F9D2800C0B890 /* CBBaseFrontViewController.h */,
+				4E52E4821D8F9D2800C0B890 /* CBBaseFrontViewController.m */,
+				4EE7D9B41D89354000B42C51 /* CBBaseViewController.h */,
+				4EE7D9B51D89354000B42C51 /* CBBaseViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4E7E8D2B1D910FF300D23362 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7D9B71D89356F00B42C51 /* CBBaseUITableCell.h */,
+				4EE7D9B81D89356F00B42C51 /* CBBaseUITableCell.m */,
+				4EE7D9BA1D894DE800B42C51 /* CBUILabel.h */,
+				4EE7D9BB1D894DE800B42C51 /* CBUILabel.m */,
+				4E52E48C1D8FB53B00C0B890 /* CBSepratorLine.h */,
+				4E52E48D1D8FB53B00C0B890 /* CBSepratorLine.m */,
+				4E2A0F271D94E2EF0069836D /* CBBaseCollectionCell.h */,
+				4E2A0F281D94E2EF0069836D /* CBBaseCollectionCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4E7E8D2F1D91108000D23362 /* My Rides */ = {
+			isa = PBXGroup;
+			children = (
+				4E7E8D311D9110CE00D23362 /* CBMyRideViewController.h */,
+				4E7E8D321D9110CE00D23362 /* CBMyRideViewController.m */,
+				4E7E8D341D91111F00D23362 /* CBMyRideCell.h */,
+				4E7E8D351D91111F00D23362 /* CBMyRideCell.m */,
+			);
+			name = "My Rides";
+			path = "../Utilty/My Rides";
+			sourceTree = "<group>";
+		};
+		4E7E8D301D91109900D23362 /* MenuModules */ = {
+			isa = PBXGroup;
+			children = (
+				4E75600D1D929DAC00E86D44 /* BookMyRide */,
+				4E52E4851D8FA4D600C0B890 /* EmergencyContacts */,
+				4E52E48F1D8FB78B00C0B890 /* Offers & Free Rides */,
+				4E7E8D2F1D91108000D23362 /* My Rides */,
+			);
+			name = MenuModules;
+			path = CabBooking/MenuModules;
+			sourceTree = SOURCE_ROOT;
+		};
 		4EE7D97C1D890A5D00B42C51 = {
 			isa = PBXGroup;
 			children = (
+				4EAC9BDD1D93AA930078AEDE /* Testing.xib */,
 				4EE7D9871D890A5D00B42C51 /* CabBooking */,
 				4EE7D9861D890A5D00B42C51 /* Products */,
 				4E37A0B9934276E167678807 /* Pods */,
@@ -115,10 +334,13 @@
 		4EE7D9871D890A5D00B42C51 /* CabBooking */ = {
 			isa = PBXGroup;
 			children = (
-				4EE7D9C61D89568000B42C51 /* Constants.h */,
+				4E7E8D301D91109900D23362 /* MenuModules */,
+				4EE7D9A61D891ABA00B42C51 /* Menu */,
+				4E2A0F211D94CE790069836D /* CustomViews */,
+				4E7560031D92392600E86D44 /* GoogleMaps */,
+				4E52E4D91D8FE74100C0B890 /* Utilty */,
 				4EE7D9BD1D8955C000B42C51 /* Fonts */,
 				4EE7D9B31D89352800B42C51 /* BaseClasses */,
-				4EE7D9A61D891ABA00B42C51 /* Menu */,
 				4EE7D9A11D891AA900B42C51 /* ThirdPartyLibs */,
 				4EE7D9A01D891A8300B42C51 /* ViewController */,
 				4EE7D99F1D891A7000B42C51 /* Appdelegate */,
@@ -185,6 +407,8 @@
 				4EE7D9B11D8920CA00B42C51 /* CBMenuDrawerHandler.m */,
 				4EE7D9C71D895B7200B42C51 /* CBMenuModel.h */,
 				4EE7D9C81D895B7200B42C51 /* CBMenuModel.m */,
+				4E6ACD491D8A585100827ECB /* CBMenuHeader.h */,
+				4E6ACD4A1D8A585100827ECB /* CBMenuHeader.m */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -192,12 +416,8 @@
 		4EE7D9B31D89352800B42C51 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				4EE7D9B41D89354000B42C51 /* CBBaseViewController.h */,
-				4EE7D9B51D89354000B42C51 /* CBBaseViewController.m */,
-				4EE7D9B71D89356F00B42C51 /* CBBaseUITableCell.h */,
-				4EE7D9B81D89356F00B42C51 /* CBBaseUITableCell.m */,
-				4EE7D9BA1D894DE800B42C51 /* CBUILabel.h */,
-				4EE7D9BB1D894DE800B42C51 /* CBUILabel.m */,
+				4E7E8D2B1D910FF300D23362 /* Views */,
+				4E7E8D2A1D910FD600D23362 /* Controllers */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -246,6 +466,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Nirma;
 				TargetAttributes = {
+					4EAC9BDF1D93D8B00078AEDE = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					4EE7D9841D890A5D00B42C51 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -265,6 +488,7 @@
 			projectRoot = "";
 			targets = (
 				4EE7D9841D890A5D00B42C51 /* CabBooking */,
+				4EAC9BDF1D93D8B00078AEDE /* CabBookingOClint */,
 			);
 		};
 /* End PBXProject section */
@@ -276,6 +500,7 @@
 			files = (
 				4EE7D9981D890A5D00B42C51 /* LaunchScreen.storyboard in Resources */,
 				4EE7D9951D890A5D00B42C51 /* Assets.xcassets in Resources */,
+				4EAC9BDE1D93AA930078AEDE /* Testing.xib in Resources */,
 				4EE7D9C41D8955C000B42C51 /* SF-UI-Text-Regular.otf in Resources */,
 				4EE7D9C21D8955C000B42C51 /* SF-UI-Text-Light.otf in Resources */,
 				4EE7D9C51D8955C000B42C51 /* SFUIDisplay-Ultralight.ttf in Resources */,
@@ -287,6 +512,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4EAC9BE31D93D8DF0078AEDE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OCLINT_HOME=${SRCROOT}/oclint\nexport PATH=$OCLINT_HOME/bin:$PATH\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\ncd ${TARGET_TEMP_DIR}\n\nif [ ! -f compile_commands.json ]; then\necho \"[*] compile_commands.json not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n# clean previous output\nif [ -f xcodebuild.log ]; then\nrm xcodebuild.log\nfi\n\ncd ${SRCROOT}\n\nxcodebuild clean\n\n#build xcodebuild.log\nxcodebuild | tee ${TARGET_TEMP_DIR}/xcodebuild.log\n#xcodebuild | tee ${TARGET_TEMP_DIR}/xcodebuild.log\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\ncd ${TARGET_TEMP_DIR}\n#transform it into compile_commands.json\noclint-xcodebuild\n\nfi\n\necho \"[*] starting analyzing\"\ncd ${TARGET_TEMP_DIR}\n\noclint-json-compilation-database -v oclint_args \"-report-type html -o $OCLINT_HOME/report.html\" | sed 's/\\(.*\\.\\m\\{1,2\\}:[0-9]*:[0-9]*:\\)/\\1 warning:/'\n";
+		};
 		89701CC8625569831D43A5B9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,13 +578,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EE7D9B61D89354000B42C51 /* CBBaseViewController.m in Sources */,
+				4E2A0F241D94CEAE0069836D /* CBButtonWithLeftImage.m in Sources */,
 				4EE7D9AC1D891ABA00B42C51 /* CBMenuViewController.m in Sources */,
 				4EE7D9901D890A5D00B42C51 /* ViewController.m in Sources */,
 				4EE7D98D1D890A5D00B42C51 /* AppDelegate.m in Sources */,
+				4E2A0F291D94E2EF0069836D /* CBBaseCollectionCell.m in Sources */,
+				4E7E8D361D91111F00D23362 /* CBMyRideCell.m in Sources */,
+				4E52E4921D8FB7B500C0B890 /* CBOffersViewController.m in Sources */,
+				4E2A0F201D94CA870069836D /* CBDriverDetailView.m in Sources */,
+				4E2A0F2C1D94E3520069836D /* CBCarCategoryCell.m in Sources */,
+				4E52E4D81D8FE5B300C0B890 /* CBOffersCell.m in Sources */,
 				4EE7D98A1D890A5D00B42C51 /* main.m in Sources */,
+				4E7560091D92405800E86D44 /* CBBookMyRideViewController.m in Sources */,
+				4E7560061D923FE600E86D44 /* CBMapHandler.m in Sources */,
+				4E52E4881D8FA50200C0B890 /* CBEmergencyViewController.m in Sources */,
 				4EE7D9B21D8920CA00B42C51 /* CBMenuDrawerHandler.m in Sources */,
 				4EE7D9C91D895B7200B42C51 /* CBMenuModel.m in Sources */,
+				4E52E48E1D8FB53B00C0B890 /* CBSepratorLine.m in Sources */,
+				4E52E4DC1D8FE75400C0B890 /* CBUtility.m in Sources */,
+				4E7E8D331D9110CE00D23362 /* CBMyRideViewController.m in Sources */,
+				4E7560131D929DFF00E86D44 /* CBBookMyRideFooterView.m in Sources */,
+				4E52E48B1D8FAFD400C0B890 /* CBEmeregencyContactCell.m in Sources */,
 				4EE7D9B91D89356F00B42C51 /* CBBaseUITableCell.m in Sources */,
+				4E52E4D51D8FE45F00C0B890 /* CBBaseFrontTableController.m in Sources */,
+				4E75600C1D927F2400E86D44 /* CBMapView.m in Sources */,
+				4E2A0F1D1D94CA770069836D /* CBCarDetailView.m in Sources */,
+				4E52E4831D8F9D2800C0B890 /* CBBaseFrontViewController.m in Sources */,
+				4E6ACD4B1D8A585100827ECB /* CBMenuHeader.m in Sources */,
 				4EE7D9AB1D891ABA00B42C51 /* CBMenuCell.m in Sources */,
 				4EE7D9A51D891AA900B42C51 /* SWRevealViewController.m in Sources */,
 				4EE7D9BC1D894DE800B42C51 /* CBUILabel.m in Sources */,
@@ -375,6 +633,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4EAC9BE01D93D8B10078AEDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4EAC9BE11D93D8B10078AEDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		4EE7D99A1D890A5D00B42C51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,10 +733,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95635C5A6E76E80B52BFB0C5 /* Pods-CabBooking.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = CabBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.intelliswift.CabBooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intelliswift.cbDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -473,10 +745,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 186944CF157339C6A791E137 /* Pods-CabBooking.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				INFOPLIST_FILE = CabBooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.intelliswift.CabBooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intelliswift.cbDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -484,6 +756,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4EAC9BE21D93D8B10078AEDE /* Build configuration list for PBXAggregateTarget "CabBookingOClint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EAC9BE01D93D8B10078AEDE /* Debug */,
+				4EAC9BE11D93D8B10078AEDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4EE7D9801D890A5D00B42C51 /* Build configuration list for PBXProject "CabBooking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

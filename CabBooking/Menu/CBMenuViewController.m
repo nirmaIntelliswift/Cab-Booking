@@ -9,6 +9,10 @@
 #import "CBMenuViewController.h"
 #import "CBMenuCell.h"
 #import "CBMenuModel.h"
+#import "CBMenuHeader.h"
+#import "SWRevealViewController.h"
+#import "CBMenuDrawerHandler.h"
+
 
 @interface CBMenuViewController ()
 
@@ -19,6 +23,7 @@ static NSString *cellIdentifier = @"CELL";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setMenuListData];
+    [self addHeaderView];
     [self addTableView];
     //self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view.
@@ -47,17 +52,24 @@ static NSString *cellIdentifier = @"CELL";
     
 }
 #pragma -mark addViews
+-(void)addHeaderView{
+    self.viewHeaderView = [[CBMenuHeader alloc]initWithFrame:CGRectZero];
+    [self.view addSubview:self.viewHeaderView];
+    [self.viewHeaderView autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [self.viewHeaderView autoPinEdgeToSuperviewEdge:ALEdgeLeading];
+    [self.viewHeaderView autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
+    [self.viewHeaderView autoSetDimension:ALDimensionHeight toSize:170];
+}
 -(void)addTableView{
     self.tableview = [[UITableView alloc]init];
     [self.tableview registerClass:[CBMenuCell class] forCellReuseIdentifier:cellIdentifier];
     self.tableview.rowHeight = 44;
     self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableview.allowsSelection = NO;
     [self.view addSubview:self.tableview];
     [self.tableview autoPinEdgeToSuperviewEdge:ALEdgeBottom];
-    [self.tableview autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [self.tableview autoPinEdgeToSuperviewEdge:ALEdgeLeading];
     [self.tableview autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
+    [self.tableview autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.viewHeaderView];
     [self.tableview layoutIfNeeded];
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
@@ -70,9 +82,7 @@ static NSString *cellIdentifier = @"CELL";
 /*- (UITableViewHeaderFooterView *)headerViewForSection:(NSInteger)section{
    
 }*/
--(int)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [menuItems count];;
 }
@@ -86,8 +96,30 @@ static NSString *cellIdentifier = @"CELL";
         
     }
     [cell setData:[menuItems objectAtIndex:indexPath.row]];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return  cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SWRevealViewController *revealController = self.revealViewController;
+    UINavigationController *frontController = [CBMenuDrawerHandler getViewControllerForIndex:(int)indexPath.row];
+    [revealController setFrontViewController:frontController animated:YES];    //sf
+    [revealController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+    [self selectMenuAtIndex:(int)indexPath.row];
+    [self refreshTableView];
+}
+-(void)selectMenuAtIndex:(int)index{
+    for (int i = 0; i<[menuItems count]; i++) {
+        CBMenuModel *model = [menuItems objectAtIndex:i];
+        model.isSelected = NO;
+        if (index == i) {
+            model.isSelected = YES;
+        }
+    }
+}
+-(void)refreshTableView{
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [self.tableview reloadData];
+    });
+}
 @end
