@@ -17,12 +17,44 @@
     }
     return self;
 }
+-(id)init{
+    self = [super init];
+    if (self) {
+        _sideMargin = 5;
+    }
+    return self;
+}
 -(id)initWithImageName:(NSString*)imageName
                  title:(NSString*)titleText{
-    self = [super init];
+    self = [self init];
+    if (self) {
+        
+        [self addLeftImageView:imageName];
+        [self addLabel:titleText];
+    }
+    return self;
+}
+-(id)initWithLeftImageName:(NSString*)imageName
+            rightImageName:(NSString *)rightImageName
+                     title:(NSString*)titleText{
+    self = [self init];
     if (self) {
         [self addLeftImageView:imageName];
         [self addLabel:titleText];
+        [self addRightImageView:rightImageName];
+    }
+    return self;
+}
+-(id)initWithLeftImageName:(NSString*)imageName
+                rightImageName:(NSString *)rightImageName
+                 title:(NSString*)titleText
+            withSideMargin:(CGFloat)sideMargin{
+    self = [self init];
+    if (self) {
+        _sideMargin = sideMargin;
+        [self addLeftImageView:imageName];
+        [self addLabel:titleText];
+        [self addRightImageView:rightImageName];
     }
     return self;
 }
@@ -33,7 +65,7 @@
      UIImage *image = [UIImage imageNamed:imageName];
     [_imgLeft autoSetDimensionsToSize:image.size];
     [_imgLeft autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [_imgLeft autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:5];
+    [_imgLeft autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:_sideMargin];
     _imgLeft.image = image;
 }
 -(void)addLabel:(NSString*)titleText{
@@ -42,7 +74,16 @@
     [_lblTitle autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
     [_lblTitle autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [_lblTitle autoPinEdgeToSuperviewEdge:ALEdgeBottom];
-    [_lblTitle autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_imgLeft withOffset:5];
+    [_lblTitle autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_imgLeft withOffset:_sideMargin];
     _lblTitle.text = titleText;
+}
+-(void)addRightImageView:(NSString*)imageName{
+    _imgRight = [UIImageView new];
+    [self addSubview:_imgRight];
+    UIImage *image = [UIImage imageNamed:imageName];
+    [_imgRight autoSetDimensionsToSize:image.size];
+    [_imgRight autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [_imgRight autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:_sideMargin];
+    _imgRight.image = image;
 }
 @end

@@ -12,4 +12,6 @@
 #import "CBSepratorLine.h"
 @interface CBBaseCollectionCell : UICollectionViewCell
 
+-(void)setData:(id)data;
+
 @end

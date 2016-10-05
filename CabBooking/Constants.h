@@ -39,6 +39,7 @@ alpha:1.0]
 #   endif // NDEBUG
 #endif // DLog
 
-
+#define ASYNC(...) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{ __VA_ARGS__ })
+#define ASYNC_MAIN(...) dispatch_async(dispatch_get_main_queue(), ^{ __VA_ARGS__ })
 
 #endif /* Constants_h */

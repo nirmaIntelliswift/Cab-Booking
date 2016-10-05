@@ -10,8 +10,9 @@
 
 @interface CBMapView : GMSMapView{
     GMSMarker         *_locationMarker;
+    NSMutableArray *carMarkers;
 }
 
--(void)showCurrentLocationAt:(CLLocation*)location;
-
+-(void)moveMapToLocation:(CLLocation*)location;
+-(void)showCabs:(NSArray*)cabs;
 @end

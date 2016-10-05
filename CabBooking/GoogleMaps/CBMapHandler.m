@@ -9,6 +9,7 @@
 #import "CBMapHandler.h"
 #import "Constants.h"
 
+#define kGoogleAPIKey @"AIzaSyAomNwrpfWv-31qU87xhEOYJZCSLoIL6yg"
 
 @implementation CBMapHandler
 -(id)init{
@@ -19,7 +20,8 @@
     return self;
 }
 +(void)registerGoogleApiKey{
-    [GMSServices provideAPIKey:@"AIzaSyAomNwrpfWv-31qU87xhEOYJZCSLoIL6yg"];
+    [GMSServices provideAPIKey:kGoogleAPIKey];
+    [GMSPlacesClient provideAPIKey:kGoogleAPIKey];
 }
 +(BOOL)isLocationManagerEnabled{
     if (![CLLocationManager locationServicesEnabled]) {
@@ -51,6 +53,38 @@
 }
 -(void)stopUpdatingCurrentLocation{
     [manager stopUpdatingLocation];
+}
+-(void)updateCurrentAddress:(CLLocationCoordinate2D)coordinate{
+    float currentLatitude = coordinate.latitude;
+    float currentLongitude = coordinate.longitude;
+    
+    [[GMSGeocoder geocoder] reverseGeocodeCoordinate:CLLocationCoordinate2DMake(currentLatitude, currentLongitude) completionHandler:^(GMSReverseGeocodeResponse* response, NSError* error) {
+        NSLog(@"Current reverse geocoding results:");
+        GMSAddress* addressObj;
+        if ([response results] > 0 ) {
+            addressObj = [response.results objectAtIndex:0];
+            // }
+            // for(addressObj in [response results])
+            // {
+            
+            DLog(@"Current  coordinate.latitude=%f", addressObj.coordinate.latitude);
+            DLog(@"Current  coordinate.longitude=%f", addressObj.coordinate.longitude);
+            DLog(@"Current  thoroughfare=%@", addressObj.thoroughfare);
+            DLog(@"Current  locality=%@", addressObj.locality);
+            DLog(@"Current  subLocality=%@", addressObj.subLocality);
+            DLog(@"Current  administrativeArea=%@", addressObj.administrativeArea);
+            DLog(@"Current  postalCode=%@", addressObj.postalCode);
+            DLog(@"Current  country=%@", addressObj.country);
+            DLog(@"Current  lines=%@", addressObj.lines);
+            [self.delegate mapLocationAddress:[addressObj.lines objectAtIndex:0]];
+            //footerView.btnCurrentLocation.lblTitle.text = [addressObj.lines objectAtIndex:0];
+            
+            
+        }
+    }];
+    
+    //footerView.btnCurrentLocation.lblTitle.text = currentLocation.description;
+    // [_mapView showCurrentLocationAt:location];
 }
 #pragma mark - CLLocationManagerDelegate
 

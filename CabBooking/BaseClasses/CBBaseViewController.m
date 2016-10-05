@@ -25,14 +25,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)callRequestWithParameters:(NSMutableDictionary*)params
+                       requestId:(int)requestId{
+    NetworkParser *business = [[NetworkParser alloc]init];
+    business.delegate = self;
+    [business sendRequestWithParams:params requestId:requestId];
 }
-*/
+
+-(void)onBusinessSuccess:(id)dataObj withAPIName:(int)nameOfAPI{
+    NSError *error;
+  //  BulletinModel* country = [[BulletinModel alloc] initWithString:dataObj error:&error];
+   // NSLog(@" response-->%@",country);
+    
+}
+-(void)onBusinessFailure:(id)dataObj withAPIName:(int)nameOfAPI{
+    
+}
+
 
 @end

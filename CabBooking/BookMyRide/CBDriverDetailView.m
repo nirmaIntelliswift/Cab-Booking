@@ -8,11 +8,14 @@
 
 #import "CBDriverDetailView.h"
 
+#define kPAYMENT_BUTTON_HEIGHT 40
+#define kPHOTO_SIZE 50
 @implementation CBDriverDetailView
 
 -(id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        [self addTopSeprator];
         [self addPhoto];
         [self addRateImage];
         [self addRateLabel];
@@ -20,25 +23,38 @@
         [self addDriverCarTypeLabel];
         [self addDriverCarNumberLabel];
         [self addMyWalletButton];
+        [self addCashButton];
+        [self addSelectPayment];
         [self addShareButton];
         [self addCallButton];
     }
     return self;
 }
+-(void)addTopSeprator{
+    _viewSepratorLine = [[CBSepratorLine alloc]init];
+    [self addSubview:_viewSepratorLine];
+    [_viewSepratorLine autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
+    [_viewSepratorLine autoPinEdgeToSuperviewEdge:ALEdgeLeading];
+    [_viewSepratorLine autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [_viewSepratorLine autoSetDimension:ALDimensionHeight toSize:0.5];
+}
 -(void)addPhoto{
     _imgDriverPhoto = [UIImageView new];
     [self addSubview:_imgDriverPhoto];
     [_imgDriverPhoto autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10];
-    [_imgDriverPhoto autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [_imgDriverPhoto autoSetDimensionsToSize:CGSizeMake(35, 35)];
-    _imgDriverPhoto.layer.cornerRadius = 17.5;
+    [_imgDriverPhoto autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withOffset:-kPAYMENT_BUTTON_HEIGHT/2];;
+    [_imgDriverPhoto autoSetDimensionsToSize:CGSizeMake(kPHOTO_SIZE, kPHOTO_SIZE)];
+    _imgDriverPhoto.layer.cornerRadius = kPHOTO_SIZE/2;
+    _imgDriverPhoto.backgroundColor = [UIColor grayColor];
 }
 -(void)addRateImage{
+    UIImage *rateImage = [UIImage imageNamed:@"ic_favorite"];
     _imgRate = [UIImageView new];
     [self addSubview:_imgRate];
     [_imgRate autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:_imgDriverPhoto withOffset:8];
     [_imgRate autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
-    [_imgRate autoSetDimensionsToSize:CGSizeMake(5, 5)];
+    [_imgRate autoSetDimensionsToSize:rateImage.size];
+    _imgRate.image = rateImage;
 }
 -(void)addRateLabel{
     _lblRateValue = [UILabel new];
@@ -76,33 +92,58 @@
     _lblDriverCarNumber.textColor = [UIColor grayColor];
 }
 -(void)addShareButton{
-    _btnShareDirection = [CBUtility btnWithTopImage:@"ic_rate_card" btnName:@"Share Direction"];
+    _btnShareDirection = [CBUtility btnWithTopImage:@"ic_share_direction" btnName:@"Share Direction"];
     [self addSubview:_btnShareDirection];
     [_btnShareDirection autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:10];
     //[_btnShareDirection autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:8];
-    [_btnShareDirection autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:8];
-    [_btnShareDirection autoSetDimension:ALDimensionWidth toSize:65];
-    [_btnShareDirection autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_btnPaymentMyWallet withOffset:-4];
+    [_btnShareDirection autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10];
+    [_btnShareDirection autoSetDimension:ALDimensionWidth toSize:70];
+    [_btnShareDirection autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_btnPaymentMyWallet withOffset:-10];
 }
 -(void)addCallButton{
-    _btnCalldriver = [CBUtility btnWithTopImage:@"ic_rate_card" btnName:@"Call Driver"];
+    _btnCalldriver = [CBUtility btnWithTopImage:@"ic_call" btnName:@"Call Driver"];
     [self addSubview:_btnCalldriver];
     [_btnCalldriver autoPinEdge:ALEdgeTrailing toEdge:ALEdgeLeading ofView:_btnShareDirection withOffset:0.5];
-    [_btnCalldriver autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_btnPaymentMyWallet withOffset:-4];
-    [_btnCalldriver autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:8];
-    [_btnCalldriver autoSetDimension:ALDimensionWidth toSize:65];
+    [_btnCalldriver autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_btnPaymentMyWallet withOffset:-10];
+    [_btnCalldriver autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10];
+    [_btnCalldriver autoSetDimension:ALDimensionWidth toSize:70];
 
     
     
 }
 -(void)addMyWalletButton{
-    _btnPaymentMyWallet = [UIButton new];
+    _btnPaymentMyWallet = [[CBButtonWithLeftImage alloc]initWithLeftImageName:@"ic_my_wallet" rightImageName:@"unselect-checkbox" title:@"My Wallet" withSideMargin:12];
     [self addSubview:_btnPaymentMyWallet];
-    [_btnPaymentMyWallet autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:1];
-    [_btnPaymentMyWallet autoConstrainAttribute:ALAttributeWidth toAttribute:ALAttributeWidth ofView:self withMultiplier:0.33];
+    [_btnPaymentMyWallet autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:-0.5];
+    [_btnPaymentMyWallet autoConstrainAttribute:ALAttributeWidth toAttribute:ALAttributeWidth ofView:self withMultiplier:0.34];
     [_btnPaymentMyWallet autoPinEdgeToSuperviewEdge:ALEdgeBottom];
-    [_btnPaymentMyWallet autoSetDimension:ALDimensionHeight toSize:25];
-    _btnPaymentMyWallet.layer.borderColor = [UIColor grayColor].CGColor;
+    [_btnPaymentMyWallet autoSetDimension:ALDimensionHeight toSize:kPAYMENT_BUTTON_HEIGHT];
+    _btnPaymentMyWallet.lblTitle.font = [UIFont fontWithName:FONT_REGULAR size:12];
+    _btnPaymentMyWallet.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _btnPaymentMyWallet.layer.borderWidth = 0.5;
+}
+-(void)addCashButton{
+    _btnPaymentCash = [[CBButtonWithLeftImage alloc]initWithLeftImageName:@"ic_cash" rightImageName:@"select-checkbox" title:@"Cash" withSideMargin:12];
+    [self addSubview:_btnPaymentCash];
+    [_btnPaymentCash autoPinEdge:ALEdgeTrailing toEdge:ALEdgeLeading ofView:_btnPaymentMyWallet withOffset:0.5];
+    [_btnPaymentCash autoConstrainAttribute:ALAttributeWidth toAttribute:ALAttributeWidth ofView:self withMultiplier:0.33];
+    [_btnPaymentCash autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [_btnPaymentCash autoSetDimension:ALDimensionHeight toSize:kPAYMENT_BUTTON_HEIGHT];
+     _btnPaymentCash.lblTitle.font = _btnPaymentMyWallet.lblTitle.font;
+    _btnPaymentCash.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _btnPaymentCash.layer.borderWidth = 0.5;
+}
+-(void)addSelectPayment{
+    _lblSelectPayment = [UILabel new];;
+    _lblSelectPayment.textAlignment = NSTextAlignmentJustified;
+    [self addSubview:_lblSelectPayment];
+    [_lblSelectPayment autoPinEdge:ALEdgeTrailing toEdge:ALEdgeLeading ofView:_btnPaymentCash withOffset:0.5];
+    [_lblSelectPayment autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:-0.5];
+    [_lblSelectPayment autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [_lblSelectPayment autoSetDimension:ALDimensionHeight toSize:kPAYMENT_BUTTON_HEIGHT];
+   _lblSelectPayment.font = _btnPaymentMyWallet.lblTitle.font;
+    _lblSelectPayment.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _lblSelectPayment.layer.borderWidth = 0.5;
+    _lblSelectPayment.text = @"  Select Payment";
 }
 @end

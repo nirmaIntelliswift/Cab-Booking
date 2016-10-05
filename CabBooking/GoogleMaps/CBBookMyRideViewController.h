@@ -10,10 +10,53 @@
 #import "CBMapHandler.h"
 #import "CBMapView.h"
 #import "CBBookMyRideFooterView.h"
-@interface CBBookMyRideViewController : CBBaseFrontViewController<CBMapDelegate,GMSMapViewDelegate,UICollectionViewDataSource>{
+#import "CBMapCenterView.h"
+#import <GooglePlaces/GooglePlaces.h>
+#import "CBMapDataModel.h"
+
+typedef enum
+{
+    CBCarBookingStatusNone,
+    CBCarBookingStatusRideNow,
+    CBCarBookingStatusConfirmBooking,
+    CBCarBookingStatusCancel
+    
+} CBCarBookingStatus;
+
+typedef enum
+{
+    CBLocationPickUp,
+    CBLocationDestination
+   
+    
+} CBLocationType;
+
+@interface CBBookMyRideViewController : CBBaseFrontViewController<CBMapDelegate,GMSMapViewDelegate,UICollectionViewDataSource,GMSAutocompleteViewControllerDelegate,UICollectionViewDelegate>{
+    
+    CBBookMyRideFooterView *viewfooter;
+    CBMapView *mapView;
+    CBMapCenterView *imgCurrentLocationMarker;
+    CBMapCenterView *imgDestinationLocationMarker;
+    
     CBMapHandler *mapHandler;
-    CBBookMyRideFooterView *footerView;
+    CBCarBookingStatus bookMyRideStatus;
+    CBLocationType selectedLocationType;
+    
     NSLayoutConstraint *constraintFooterBottom;
+    NSLayoutConstraint *constraintFooterHeight;
+
+    
+    
+    BOOL _firstLocationUpdate;
+    BOOL isMapMoving;
+    CLLocation *currentLocation;
+    CLLocation *pickUpLocation;
+    CLLocation *destinationLocation;
+    
+    
+    ///for test;ng
+    CBMapDataModel* dataBookMyRide;
+    int selectedCarCategory;
 }
 
 @end

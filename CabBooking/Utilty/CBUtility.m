@@ -27,7 +27,7 @@
     lblTitle.text = title;
     lblTitle.font = [UIFont fontWithName:FONT_LIGHT size:8];
     lblTitle.textAlignment = NSTextAlignmentCenter;
-    btn.layer.borderColor = [UIColor grayColor].CGColor;
+    btn.layer.borderColor = [UIColor lightGrayColor].CGColor;
     btn.layer.borderWidth = 0.5 ;
     return btn;
 }

@@ -14,21 +14,32 @@
 #import "CBButtonWithLeftImage.h"
 
 IB_DESIGNABLE
-@interface CBBookMyRideFooterView : UIView
-IBInspectable
-@property(nonatomic,strong)UIButton *btnBottom;
-IBInspectable
-@property(nonatomic,strong)UICollectionView *collectionCarCategories;
+@interface CBBookMyRideFooterView : UIView{
+    NSLayoutConstraint *constraintCollectionViewHeight;
+}
+
+#pragma mark UIViews
 IBInspectable
 @property(nonatomic,strong)UIView *viewCurrentLocation;
 IBInspectable
 @property(nonatomic,strong)CBCarDetailView *viewCarDetail;
 IBInspectable
 @property(nonatomic,strong)CBDriverDetailView *viewDriverDetail;
+
+#pragma mark UIButtons
+IBInspectable
+@property(nonatomic,strong)UIButton *btnBottom;
 IBInspectable
 @property(nonatomic,strong) CBButtonWithLeftImage *btnCurrentLocation;
 IBInspectable
-@property(nonatomic,strong) CBButtonWithLeftImage *btnDesinationLocation;
+@property(nonatomic,strong) CBButtonWithLeftImage *btnDestination;
+
+#pragma mark UICollection
+IBInspectable
+@property(nonatomic,strong)UICollectionView *collectionCarCategories;
 
 
+-(CGFloat)setRideNowView;
+-(CGFloat)setConfirmBookingView;
+-(CGFloat)setCancelBookingView;
 @end

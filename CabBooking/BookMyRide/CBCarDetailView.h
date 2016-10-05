@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "CBUtility.h"
+#import "CBSepratorLine.h"
 IB_DESIGNABLE
 @interface CBCarDetailView : UIView
 
+IBInspectable
+@property(nonatomic,strong)CBSepratorLine *viewTopSepratorLine;
+IBInspectable
+@property(nonatomic,strong)CBSepratorLine *viewBottomSepratorLine;
+#pragma mark UILabels
 IBInspectable
 @property(nonatomic,strong)UILabel *lblCarCategory;
 IBInspectable
@@ -21,6 +27,8 @@ IBInspectable
 @property(nonatomic,strong)UILabel *lblFare;
 IBInspectable
 @property(nonatomic,strong)UILabel *lblMinSize;
+
+#pragma mark UIButtons
 IBInspectable
 @property(nonatomic,strong)UIButton *btnFareEstimate;
 IBInspectable

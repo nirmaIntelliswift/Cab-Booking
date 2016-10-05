@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <GooglePlaces/GooglePlaces.h>
 
 @protocol CBMapDelegate <NSObject>
 
 @optional
 -(void)mapCurrentLocationAt:(CLLocation *)location;
+-(void)mapLocationAddress:(NSString*)address;
 
 @end
 @interface CBMapHandler : NSObject<CLLocationManagerDelegate>{
@@ -23,6 +25,9 @@
 
 -(void)startUpdatingCurrentLocation;
 -(void)stopUpdatingCurrentLocation;
+-(void)updateCurrentAddress:(CLLocationCoordinate2D)coordinate;
+
 +(void)registerGoogleApiKey;
 +(BOOL)isLocationManagerEnabled;
+
 @end

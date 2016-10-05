@@ -23,12 +23,12 @@
 -(void)addNavigationButton{
     SWRevealViewController *revealController = self.revealViewController;
     
-    [self.view addGestureRecognizer:revealController.panGestureRecognizer];//
+    //[self.view addGestureRecognizer:revealController.panGestureRecognizer];//
     
     UIBarButtonItem *menuItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon"] style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
     [self.navigationItem setLeftBarButtonItem:menuItem];
     menuItem.tintColor = [UIColor blackColor];
-    //[self addOverLayView];
+    [self addOverLayView];
 }
 -(void)addOverLayView{
     overlayView = [UIButton buttonWithType:UIButtonTypeCustom];

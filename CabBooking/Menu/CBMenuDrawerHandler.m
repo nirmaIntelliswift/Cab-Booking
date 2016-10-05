@@ -109,9 +109,25 @@
 }
 - (void)revealController:(SWRevealViewController *)revealController animateToPosition:(FrontViewPosition)position{
     DLog( @"%@: %@", NSStringFromSelector(_cmd), revealController);
-    //UINavigationController *nav = (UINavigationController*)revealController.frontViewController;
-  //  CBBaseFrontViewController *frontView = (CBBaseFrontViewController*)nav.topViewController;
-    //frontView.overlayView.alpha = 0;
+    /*UINavigationController *nav = (UINavigationController *)revealController.frontViewController;
+    CBBaseFrontViewController *frontViewCon = (CBBaseFrontViewController*)[nav topViewController];;
+  if (position == FrontViewPositionLeft) {
+     frontViewCon.overlayView.alpha = 1;
+  }else if(position == FrontViewPositionRight){
+      frontViewCon.overlayView.alpha = 0;
+  }*/
+}
+-(void)revealController:(SWRevealViewController *)revealController panGestureMovedToLocation:(CGFloat)location progress:(CGFloat)progress{
+    /*UINavigationController *nav = (UINavigationController *)revealController.frontViewController;
+    CBBaseFrontViewController *frontViewCon = (CBBaseFrontViewController*)[nav topViewController];;
+    if (progress > 1) {
+       frontViewCon.overlayView.alpha = 0;
+    }else if(progress == 0){
+        frontViewCon.overlayView.alpha = 1; }
+    else{
+        frontViewCon.overlayView.alpha = 1 - (0.85 * progress);
+    }*/
+   // DLog(@"%f - %f",progress, frontViewCon.overlayView.alpha);
 }
 +(UINavigationController *)getViewControllerForIndex:(int)tableIndex{
     CBBaseFrontViewController *frontViewController;
@@ -122,12 +138,12 @@
         case 1:
             frontViewController = [[CBMyRideViewController alloc] init];
             break;
-        case 4:
+       /* case 4:
             frontViewController = [[CBOffersViewController alloc] init];
             break;
         case 5:
             frontViewController = [[CBEmergencyViewController alloc] init];
-            break;
+            break;*/
             
         default:
             frontViewController = [[CBBaseFrontViewController alloc] init];

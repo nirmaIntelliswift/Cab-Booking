@@ -11,6 +11,8 @@
 #import "CBColors.h"
 #import <PureLayout/PureLayout.h>
 #import "Constants.h"
-@interface CBBaseViewController : UIViewController
-
+#import "NetworkParser.h"
+@interface CBBaseViewController : UIViewController<NetworkParserDelegate>
+-(void)callRequestWithParameters:(NSDictionary*)params
+                       requestId:(int)requestId;
 @end
