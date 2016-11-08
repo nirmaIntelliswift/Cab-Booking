@@ -24,4 +24,7 @@
 
 -(void)sendRequestWithParams:(NSMutableDictionary *)parameters
                    requestId:(int)requestId;
+-(void)sendGetRequestWithParams:(NSMutableDictionary *)parameters
+                   requestId:(int)requestId;
+
 @end

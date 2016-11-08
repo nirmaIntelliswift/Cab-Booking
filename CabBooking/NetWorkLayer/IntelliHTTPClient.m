@@ -18,6 +18,12 @@
      [IntelliHTTPClient requestDataFromURL:[NSURL URLWithString:urlString] method:@"POST" requestBody:jsonData handler:completeBlock];
     
 }
++(void)getJSONFromURLWithString:(NSString*)urlString params:(NSDictionary*)params completion:(completeBlock)completeBlock{
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:&error];
+    [IntelliHTTPClient requestDataFromURL:[NSURL URLWithString:urlString] method:@"GET" requestBody:nil handler:completeBlock];
+    
+}
 +(void)requestDataFromURL:(NSURL*)url method:(NSString*)method requestBody:(NSData*)bodyData  handler:(RequestResultBlock)handler
 {
     

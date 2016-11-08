@@ -26,7 +26,7 @@
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        _imgItem = [[UIImageView alloc]init];
+        _imgItem = [[CBUIImageView alloc]init];
         _lblItemAmount = [UILabel new];
         _lblItemName= [UILabel new];
         
@@ -59,11 +59,14 @@
     
     //_lblItemAmount.text = [NSString stringWithFormat:@"%d",item.itemAmount];
     _imgItem.image = [UIImage imageNamed:item.itemImageName];
-    _imgItem.layer.borderColor = [UIColor clearColor].CGColor;
-    _imgItem.layer.borderWidth = 0.0;
+    //_imgItem.layer.borderColor = [UIColor clearColor].CGColor;
+    //_imgItem.layer.borderWidth = 0.0;
+     _imgItem.image = [_imgItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    _imgItem.tintColor =   _lblItemName.textColor = [UIColor blackColor];
     if (item.isSelected) {
-        _imgItem.layer.borderColor = [UIColor redColor].CGColor;
-        _imgItem.layer.borderWidth = 1;
+        //_imgItem.layer.borderColor = UIColorFromRGB(COLOR_PINK).CGColor;
+        //_imgItem.layer.borderWidth = 1;
+         _imgItem.tintColor = _lblItemName.textColor =  UIColorFromRGB(COLOR_PINK);
     }
 }
 @end

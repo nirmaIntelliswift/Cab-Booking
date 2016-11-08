@@ -8,6 +8,7 @@
 
 #import "CBBaseCollectionCell.h"
 #import "CBCarCategoryModel.h"
+#import "CBUIImageView.h"
 
 @interface CBCarCategoryCell : CBBaseCollectionCell
 
@@ -16,7 +17,7 @@
 @property(nonatomic,strong)UILabel *lblCarCategory;
 
 #pragma mark UIImageViews
-@property(nonatomic,strong)UIImageView *imgCar;
+@property(nonatomic,strong)CBUIImageView *imgCar;
 
 @property(nonatomic,strong)CBSepratorLine *sideSepratar;
 @property(nonatomic,strong)CBSepratorLine *bottomSepratar;

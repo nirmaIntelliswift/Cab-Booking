@@ -8,7 +8,10 @@
 
 #import "CBBaseFrontTableController.h"
 #import "CBOffersCell.h"
+#import "CBOffersModel.h"
 
-@interface CBOffersViewController : CBBaseFrontTableController
+@interface CBOffersViewController : CBBaseFrontTableController{
+    CBOffersModel *dataOffers;
+}
 
 @end

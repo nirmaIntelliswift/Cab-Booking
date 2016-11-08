@@ -7,6 +7,8 @@
 //
 
 #import "CBOffersCell.h"
+#import "CBOfferModel.h"
+
 #define SIDE_MARGIN 15
 @implementation CBOffersCell
 
@@ -67,5 +69,12 @@
     }
     return self;
 }
-
+-(void)setData:(id)data{
+    CBOfferModel *offer = (CBOfferModel*)data;
+    
+    _lblOffer.text = offer.offerHeading;
+    _lblOfferDetail.text = offer.offerSubtext;
+    _lblOfferExpiryDate.text = [NSString stringWithFormat:@"Expires:\n%@",offer.expiresOn];
+    _lblOfferCode.text = offer.promoCode;
+}
 @end

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CBBaseUITableCell.h"
+#import "CBUIImageView.h"
 
 @interface CBMenuCell : CBBaseUITableCell
 
-@property(nonatomic ,strong)UIImageView *imgItem;
+@property(nonatomic ,strong)CBUIImageView *imgItem;
 @property(nonatomic ,strong)UILabel *lblItemName;
 @property(nonatomic ,strong)UILabel *lblItemAmount;
 @end

@@ -15,18 +15,9 @@
 #import "IntelliHTTPClient.h"
 
 @implementation NetworkParser
-
--(void)sendRequestWithParams:(NSMutableDictionary *)dict
-                   requestId:(int)requestId{
-   // [self sendRequestWithParams_BY_JSONMODEL:dict requestId:requestId];
-    [self sendRequestWithParams_BY_INTELLI:dict requestId:requestId];
-   // [self sendRequestWithParams_BY_AFNETWORKING:dict requestId:requestId];
-}
--(void)sendRequestWithParams_BY_INTELLI:(NSMutableDictionary *)dict
-                              requestId:(int)requestId{
-    NSMutableString *fullUrl = [NSMutableString stringWithFormat:BASEURL];
-    [fullUrl appendString:[dict objectForKey:@"method"]];
-    [IntelliHTTPClient postJSONFromURLWithString:fullUrl
+-(void)sendGetRequestWithParams:(NSMutableDictionary *)dict
+                      requestId:(int)requestId{
+    [IntelliHTTPClient getJSONFromURLWithString:[self getFullUrl:dict]
                                           params:dict
                                       completion:^(id json, NSError *err) {
                                           
@@ -36,7 +27,30 @@
                                           [self checkJsonResponse:json requestId:requestId];
                                       }];
 }
-
+-(void)sendRequestWithParams:(NSMutableDictionary *)dict
+                   requestId:(int)requestId{
+   // [self sendRequestWithParams_BY_JSONMODEL:dict requestId:requestId];
+    [self sendRequestWithParams_BY_INTELLI:dict requestId:requestId];
+   // [self sendRequestWithParams_BY_AFNETWORKING:dict requestId:requestId];
+}
+-(void)sendRequestWithParams_BY_INTELLI:(NSMutableDictionary *)dict
+                              requestId:(int)requestId{
+   
+    [IntelliHTTPClient postJSONFromURLWithString:[self getFullUrl:dict]
+                                          params:dict
+                                      completion:^(id json, NSError *err) {
+                                          
+                                          //check err, process json ...
+                                          //  NSLog(@" response-->%@",json);
+                                          
+                                          [self checkJsonResponse:json requestId:requestId];
+                                      }];
+}
+-(NSString*)getFullUrl:(NSMutableDictionary *)dict{
+    NSMutableString *fullUrl = [NSMutableString stringWithFormat:BASEURL];
+    [fullUrl appendString:[dict objectForKey:@"method"]];
+    return fullUrl;
+}
 -(void)checkJsonResponse:(id)json
         requestId:(int)requestId{
     NSDictionary *jsonDic = (NSDictionary*)json;

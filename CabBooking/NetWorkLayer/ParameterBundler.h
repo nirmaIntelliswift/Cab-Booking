@@ -11,9 +11,25 @@
 //funcation called addCommonParametersInDic is used to add common keys in every request
 
 #import <Foundation/Foundation.h>
-
+#import <CoreLocation/CoreLocation.h>
 @interface ParameterBundler : NSObject
 
-+(NSMutableDictionary*)getAllCabsForLatitude:(double)latitude
-                                   longitude:(double)longitude;
++(NSMutableDictionary*)getAllCabsForLocation:(CLLocation*)location;
++(NSMutableDictionary*)getRidesEstimationPickUpLocation:(CLLocation*)pickUpLocation
+                                  toDestinationLocation:(CLLocation*)destinationLocation;
++(NSMutableDictionary*)getConfirmRidePickUpLocation:(CLLocation*)pickUpLocation
+                              toDestinationLocation:(CLLocation*)destinationLocation
+                                      cabCategoryId:(int)cabId;
++(NSMutableDictionary*)getMyRidesStartIndex:(int)startIndex
+                                      count:(int)total;
+
++(NSMutableDictionary*)getUpdatedLocation:(NSArray*)cabs;
+
++(NSMutableDictionary*)getRideDetails:(NSString*)crnNo;
++(NSMutableDictionary*)getCancelRide:(NSString*)crnNo reasonCode:(int)resonCode;
++(NSMutableDictionary*)getRateCard;
++(NSMutableDictionary*)getOffers;
++(NSMutableDictionary*)getEmergencyContacts;
++(NSMutableDictionary*)getUserData;
+
 @end

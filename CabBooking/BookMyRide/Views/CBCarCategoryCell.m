@@ -33,12 +33,14 @@
 }
 -(void)addCarImage{
     UIImage *image = [UIImage imageNamed:@"compact"];
-    _imgCar = [UIImageView new];
+    _imgCar = [CBUIImageView new];
     [self.contentView addSubview:_imgCar];
     [_imgCar autoSetDimensionsToSize:image.size];
     [_imgCar autoCenterInSuperview];
     _imgCar.image = image;
     _imgCar.tintColor = [UIColor blackColor];
+    _imgCar.image = [_imgCar.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+
 }
 -(void)addCarAwayTime{
     _lblCarAwayTime = [UILabel new];
@@ -97,15 +99,12 @@
 }
 -(void)fadeIn{
     //_viewTopFaded.alpha = 0.5;
-    UIImage *image = [UIImage imageNamed:@"compact"];
-    _imgCar.image = image;
+   // UIImage *image = [UIImage imageNamed:@"compact"];
+   // _imgCar.image = image;
     _bottomSepratar.backgroundColor = [UIColor clearColor];
     _lblCarCategory.textColor = [UIColor grayColor];
 }
 -(void)fadeOut{
-   // _viewTopFaded.alpha = 0.0;
-    UIImage *image = [UIImage imageNamed:@"compactEnable"];
-    _imgCar.image = image;
     _bottomSepratar.backgroundColor = UIColorFromRGB(COLOR_BLUE);
      _lblCarCategory.textColor = [UIColor blackColor];
 }
@@ -113,5 +112,8 @@
     CBCarCategoryModel *carCategory = (CBCarCategoryModel*)data;
     _lblCarCategory.text = carCategory.categoryTitle;
     _lblCarAwayTime.text = carCategory.eta;
+    //_imgCar.image = [UIImage imageNamed:[carCategory getCabCategoryImageName]];;
+    [self setCarSelected:carCategory.isSelected];
+    _imgCar.tintColor =  [carCategory getCabCategoryColor];
 }
 @end

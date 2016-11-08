@@ -86,4 +86,7 @@
     [_imgRight autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:_sideMargin];
     _imgRight.image = image;
 }
+-(void)setSelected:(BOOL)selected{
+    
+}
 @end

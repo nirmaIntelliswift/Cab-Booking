@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CBMenuHeader.h"
 
 @interface CBMenuViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *menuItems;
 }
 
 @property (strong, nonatomic)  UITableView *tableview;
-@property (strong, nonatomic)  UIView *viewHeaderView;
+@property (strong, nonatomic)  CBMenuHeader *viewHeaderView;
 
+-(void)updateHeader;
 @end

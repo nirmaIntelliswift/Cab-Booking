@@ -8,6 +8,6 @@
 
 #ifndef ServerInfo_h
 #define ServerInfo_h
-#define BASEURL   @"https://private-3541a-cabtesting.apiary-mock.com/"
-
+//#define BASEURL   @"https://private-3541a-cabtesting.apiary-mock.com/"
+#define BASEURL   @"https://private-c6f358-cabbookingapp.apiary-mock.com/"
 #endif /* ServerInfo_h */

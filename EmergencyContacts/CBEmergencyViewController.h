@@ -8,6 +8,10 @@
 
 #import "CBBaseFrontTableController.h"
 #import "CBEmeregencyContactCell.h"
-@interface CBEmergencyViewController : CBBaseFrontTableController
+#import "CBEmergencyContactsModel.h"
+
+@interface CBEmergencyViewController : CBBaseFrontTableController{
+    CBEmergencyContactsModel *dataContacts;
+}
 
 @end

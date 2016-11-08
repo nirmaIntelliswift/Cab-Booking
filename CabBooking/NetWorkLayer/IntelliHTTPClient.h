@@ -15,5 +15,5 @@ typedef void (^completeBlock)(id json, NSError* err);
 @interface IntelliHTTPClient : NSObject
 
 +(void)postJSONFromURLWithString:(NSString*)urlString params:(NSDictionary*)params completion:(completeBlock)completeBlock;
-
++(void)getJSONFromURLWithString:(NSString*)urlString params:(NSDictionary*)params completion:(completeBlock)completeBlock;
 @end

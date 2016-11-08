@@ -31,7 +31,7 @@
     
 }
 -(void)addUserPhoto{
-    _imgUserPhoto = [[UIImageView alloc]init];
+    _imgUserPhoto = [[CBUIImageView alloc]init];
     [self addSubview:_imgUserPhoto];
     [_imgUserPhoto autoSetDimensionsToSize:CGSizeMake(50, 50)];
     [_imgUserPhoto autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10];
@@ -65,5 +65,8 @@
     gLayer.startPoint = CGPointMake(0, 0.30);;
     gLayer.endPoint = CGPointMake(1.0, 1.0);
     gLayer.locations = @[[NSNumber numberWithFloat:0.0],[NSNumber numberWithFloat:0.35]];
+}
+-(void)setLayerColors{
+    [self initGradientLayer];
 }
 @end

@@ -12,6 +12,10 @@
 #import "CBOffersViewController.h"
 #import "CBMyRideViewController.h"
 #import "CBBookMyRideViewController.h"
+#import "CBRateCardViewController.h"
+#import "CBProfileViewController.h"
+#import "CBSettingViewController.h"
+#import "CBConfigrationViewController.h"
 
 @implementation CBMenuDrawerHandler
 
@@ -61,6 +65,9 @@
 - (void)revealController:(SWRevealViewController *)revealController willMoveToPosition:(FrontViewPosition)position
 {
     DLog( @"%@: %@", NSStringFromSelector(_cmd), [self stringFromFrontViewPosition:position]);
+    CBMenuViewController *menuController = (CBMenuViewController *)revealController.rearViewController;
+    [menuController updateHeader];
+
 }
 
 - (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position
@@ -108,26 +115,29 @@
     DLog( @"%@: %@", NSStringFromSelector(_cmd), viewController);
 }
 - (void)revealController:(SWRevealViewController *)revealController animateToPosition:(FrontViewPosition)position{
+    UINavigationController *nav = (UINavigationController *)revealController.frontViewController;
+    CBBaseFrontViewController *frontViewCon = (CBBaseFrontViewController*)[nav topViewController];;
+    [frontViewCon.view endEditing:YES];
     DLog( @"%@: %@", NSStringFromSelector(_cmd), revealController);
-    /*UINavigationController *nav = (UINavigationController *)revealController.frontViewController;
+   /* UINavigationController *nav = (UINavigationController *)revealController.frontViewController;
     CBBaseFrontViewController *frontViewCon = (CBBaseFrontViewController*)[nav topViewController];;
   if (position == FrontViewPositionLeft) {
-     frontViewCon.overlayView.alpha = 1;
-  }else if(position == FrontViewPositionRight){
-      frontViewCon.overlayView.alpha = 0;
+     frontViewCon.overlayView.alpha = 0.15;
+  }else if(position == FrontViewPositionRightMost){
+      frontViewCon.overlayView.alpha = 1;
   }*/
 }
 -(void)revealController:(SWRevealViewController *)revealController panGestureMovedToLocation:(CGFloat)location progress:(CGFloat)progress{
-    /*UINavigationController *nav = (UINavigationController *)revealController.frontViewController;
+   /* UINavigationController *nav = (UINavigationController *)revealController.frontViewController;
     CBBaseFrontViewController *frontViewCon = (CBBaseFrontViewController*)[nav topViewController];;
-    if (progress > 1) {
-       frontViewCon.overlayView.alpha = 0;
+    if (progress > 4) {
+       frontViewCon.overlayView.alpha = 1;
     }else if(progress == 0){
-        frontViewCon.overlayView.alpha = 1; }
+        frontViewCon.overlayView.alpha = 0.15; }
     else{
-        frontViewCon.overlayView.alpha = 1 - (0.85 * progress);
-    }*/
-   // DLog(@"%f - %f",progress, frontViewCon.overlayView.alpha);
+        frontViewCon.overlayView.alpha = 4 - (0.85 * progress);
+    }
+    DLog(@"%f - %f",progress, frontViewCon.overlayView.alpha);*/
 }
 +(UINavigationController *)getViewControllerForIndex:(int)tableIndex{
     CBBaseFrontViewController *frontViewController;
@@ -138,13 +148,27 @@
         case 1:
             frontViewController = [[CBMyRideViewController alloc] init];
             break;
-       /* case 4:
+        case 2:
+              frontViewController = [[CBRateCardViewController alloc] init];
+        break;
+            
+        case 4:
             frontViewController = [[CBOffersViewController alloc] init];
             break;
         case 5:
             frontViewController = [[CBEmergencyViewController alloc] init];
-            break;*/
+            break;
+        case 6:
+            frontViewController = [[CBSettingViewController alloc] init];
+            break;
+        case 8:
+            frontViewController = [[CBConfigrationViewController alloc] init];
+            break;
             
+        case 9:
+            frontViewController = [[CBProfileViewController alloc] init];
+            break;
+          
         default:
             frontViewController = [[CBBaseFrontViewController alloc] init];
             frontViewController.title = @"In Progress";

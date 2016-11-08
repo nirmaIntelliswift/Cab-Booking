@@ -8,9 +8,10 @@
 
 #ifndef CBColors_h
 #define CBColors_h
+#import "CBUtility.h"
 
-#define COLOR_PINK 0xFF2D55
-#define COLOR_BLUE 0x007AFF
+#define COLOR_PINK [CBUtility getThemeColor1]//0xFF2D55
+#define COLOR_BLUE [CBUtility getThemeColor2]//0x007AFF
 
 #define COLOR_SEPRATOR_LINE 0xCECED2
 

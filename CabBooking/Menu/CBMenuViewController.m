@@ -9,7 +9,7 @@
 #import "CBMenuViewController.h"
 #import "CBMenuCell.h"
 #import "CBMenuModel.h"
-#import "CBMenuHeader.h"
+
 #import "SWRevealViewController.h"
 #import "CBMenuDrawerHandler.h"
 
@@ -38,11 +38,11 @@ static NSString *cellIdentifier = @"CELL";
     NSArray *itemNames = @[@"Book Your Ride",@"My Rides",
                             @"Rate Card",@"My Wallet",
                             @"Offers & Free Rides",@"Emeregency Contacts",
-                            @"Settings",@"Support"];
+                            @"Settings",@"Support",@"Configuration"];
     NSArray *imageNames = @[@"book_ride",@"contacts",
                             @"my_rides",@"my_wallet",
                             @"offers",@"rate_card",
-                            @"settings",@"support"];
+                            @"settings",@"support",@"support"];
     for (int i  = 0 ; i < [imageNames count]; i++) {
         CBMenuModel *model = [CBMenuModel new];
         model.itemName = [itemNames objectAtIndex:i];
@@ -59,6 +59,14 @@ static NSString *cellIdentifier = @"CELL";
     [self.viewHeaderView autoPinEdgeToSuperviewEdge:ALEdgeLeading];
     [self.viewHeaderView autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
     [self.viewHeaderView autoSetDimension:ALDimensionHeight toSize:170];
+    
+    UITapGestureRecognizer *tapGesture  = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(openProfile)];
+    self.viewHeaderView.imgUserPhoto.userInteractionEnabled = YES;
+    //[self.viewHeaderView.imgUserPhoto addGestureRecognizer:tapGesture];
+    
+}
+-(void)updateHeader{
+    [self.viewHeaderView setLayerColors];
 }
 -(void)addTableView{
     self.tableview = [[UITableView alloc]init];
@@ -107,6 +115,12 @@ static NSString *cellIdentifier = @"CELL";
     [revealController setFrontViewPosition:FrontViewPositionLeft animated:YES];
     [self selectMenuAtIndex:(int)indexPath.row];
     [self refreshTableView];
+}
+-(void)openProfile{
+    SWRevealViewController *revealController = self.revealViewController;
+    UINavigationController *frontController = [CBMenuDrawerHandler getViewControllerForIndex:[menuItems count]];
+    [revealController setFrontViewController:frontController animated:YES];    //sf
+    [revealController setFrontViewPosition:FrontViewPositionLeft animated:YES];
 }
 -(void)selectMenuAtIndex:(int)index{
     for (int i = 0; i<[menuItems count]; i++) {

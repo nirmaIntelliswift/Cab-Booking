@@ -7,6 +7,7 @@
 //
 
 #import "CBEmeregencyContactCell.h"
+#import "CBContactModel.h"
 
 #define LEFT_MARGIN 15
 #define IMAGE_SIZE 40
@@ -16,7 +17,7 @@
 -(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        _imgContactPhoto = [[UIImageView alloc]init];
+        _imgContactPhoto = [[CBUIImageView alloc]init];
         _lblContactName = [UILabel new];
         _lblContactPhoneNumber= [UILabel new];
         _btnTrash = [UIButton new];
@@ -53,12 +54,14 @@
         _lblContactName.textColor = UIColorFromRGB(COLOR_PINK);
         _lblContactPhoneNumber.textColor = [UIColor grayColor];
         _imgContactPhoto.image = [UIImage imageNamed:@"ic_rate_card"];
-        [_btnTrash setImage:[UIImage imageNamed:@"ic_rate_card"] forState:UIControlStateNormal];
+        [_btnTrash setImage:[UIImage imageNamed:@"thrash"] forState:UIControlStateNormal];
     }
     return self;
 }
 -(void)setData:(id)data{
-   
+    CBContactModel *contact = (CBContactModel*)data;
+    _lblContactName.text = contact.name;
+    _lblContactPhoneNumber.text = contact.number;
 }
 
 

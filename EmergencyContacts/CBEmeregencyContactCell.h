@@ -7,11 +7,11 @@
 //
 
 #import "CBBaseUITableCell.h"
-
+#import "CBUIImageView.h"
 
 @interface CBEmeregencyContactCell : CBBaseUITableCell
 
-@property(nonatomic ,strong)UIImageView *imgContactPhoto;
+@property(nonatomic ,strong)CBUIImageView *imgContactPhoto;
 @property(nonatomic ,strong)UILabel *lblContactName;
 @property(nonatomic ,strong)UILabel *lblContactPhoneNumber;
 @property(nonatomic ,strong)UIButton *btnTrash;

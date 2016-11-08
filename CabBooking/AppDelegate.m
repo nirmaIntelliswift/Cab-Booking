@@ -22,6 +22,11 @@
     self.menuDrawerHandler = [[CBMenuDrawerHandler alloc]init];
     self.window.rootViewController = self.menuDrawerHandler.mainRootViewController;
     [self.window makeKeyAndVisible];
+    for (NSString *fontFamilyName in [UIFont familyNames]) {
+        for (NSString *fontName in [UIFont fontNamesForFamilyName:fontFamilyName]) {
+            NSLog(@"Family: %@    Font: %@", fontFamilyName, fontName);
+        }
+    }
     return YES;
 }
 

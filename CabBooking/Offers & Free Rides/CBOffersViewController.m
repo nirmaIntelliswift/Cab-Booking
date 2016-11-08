@@ -18,6 +18,7 @@ static NSString *cellIdentifier = @"EMERGENCY_CELL";
     [super viewDidLoad];
     self.title = TITLE_OFFERS_AND_RIDES;
     [self setTableViewDetails];
+    [self requestOffers];
     // Do any additional setup after loading the view.
 }
 
@@ -38,11 +39,28 @@ static NSString *cellIdentifier = @"EMERGENCY_CELL";
     [self.tableview layoutIfNeeded];
     [self.tableview reloadData];
 }
+#pragma mark -requests
+-(void)requestOffers{
+    NSMutableDictionary *params = [ParameterBundler getOffers];
+    [self callGetRequestWithParameters:params requestId:API_ID_OFFERS];
+}
+#pragma mark -response
+-(void)onBusinessSuccess:(id)dataObj withAPIName:(int)idOfAPI{
+     [super onBusinessSuccess:dataObj withAPIName:idOfAPI];
+    ASYNC_MAIN(
+               NSError *error;
+               dataOffers = [[CBOffersModel alloc] initWithString:dataObj error:&error];
+               [self.tableview reloadData];
+               DLog(@" response-->%@",dataOffers.message);
+               );
+    
+    
+}
 #pragma mark -tableview DataSource
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;;
+    return [dataOffers.offers count];;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -59,7 +77,7 @@ static NSString *cellIdentifier = @"EMERGENCY_CELL";
     else{
         cell.lblOfferDetail.text = @"Free trip upto rs 150 for inviting james";
     }
-    //[cell setData:[menuItems objectAtIndex:indexPath.row]];
+    [cell setData:[dataOffers.offers objectAtIndex:indexPath.row]];
     
     return  cell;
 }
