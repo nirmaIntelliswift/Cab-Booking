@@ -18,5 +18,8 @@
                        requestId:(int)requestId;
 -(void)callGetRequestWithParameters:(NSMutableDictionary*)params
                           requestId:(int)requestId;
+-(void)callRequestWithParameters:(NSMutableDictionary*)params
+                       requestId:(int)requestId
+                      withLoader:(BOOL)isLoaderShow;
 -(void)setBackButton;
 @end

@@ -37,6 +37,10 @@ static NSString *cellIdentifier = @"PROFILE_CELL";
     self.tableview.dataSource = self;
     self.tableview.tableHeaderView = viewProfileHeader;
     [viewProfileHeader.btnCameraIcon addTarget:self action:@selector(cameraIconClicked) forControlEvents:UIControlEventTouchUpInside];
+    NSData *imageData = [CBUtility readFromDisk:USER_PROFILE_PHOTO];
+    if (imageData != nil) {
+        viewProfileHeader.imgPhoto.image = [UIImage imageWithData:imageData];
+    }
 }
 -(void)addBottomButton{
     UIButton *btn = [UIButton new];
@@ -59,7 +63,7 @@ static NSString *cellIdentifier = @"PROFILE_CELL";
     dataUserDetails = @[dataUser.email,dataUser.firstName,dataUser.lastName,[NSString stringWithFormat:@"%d",dataUser.mobile]];
     [self.tableview reloadData];
      viewProfileHeader.lblName.text = [dataUser getUserFullName];
-    [viewProfileHeader.imgPhoto setImageFromUrl:dataUser.imageUrl];
+    //[viewProfileHeader.imgPhoto setImageFromUrl:dataUser.imageUrl];
 }
 
 -(void)cameraIconClicked{
@@ -89,7 +93,10 @@ static NSString *cellIdentifier = @"PROFILE_CELL";
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
-    [self presentViewController:picker animated:YES completion:NULL];
+    ASYNC_MAIN(
+     [self presentViewController:picker animated:YES completion:NULL];
+    );
+   
     
 }
 - (void)selectPhoto {
@@ -99,7 +106,11 @@ static NSString *cellIdentifier = @"PROFILE_CELL";
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
-    [self presentViewController:picker animated:YES completion:NULL];
+    ASYNC_MAIN(
+               [self presentViewController:picker animated:YES completion:NULL];
+               );
+
+   
     
     
 }
@@ -107,6 +118,10 @@ static NSString *cellIdentifier = @"PROFILE_CELL";
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     viewProfileHeader.imgPhoto.image = chosenImage;
+    NSData *imageData = UIImagePNGRepresentation(chosenImage);
+    [CBUtility storeToDisk:imageData forKey:USER_PROFILE_PHOTO];
+    
+    NSData *imageData1 = [CBUtility readFromDisk:USER_PROFILE_PHOTO];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

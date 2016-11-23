@@ -10,6 +10,9 @@
 #define CBColors_h
 #import "CBUtility.h"
 
+#define COLOR_DEFAULT_PINK @"FF2D55"
+#define COLOR_DEFAULT_BLUE @"007AFF"
+
 #define COLOR_PINK [CBUtility getThemeColor1]//0xFF2D55
 #define COLOR_BLUE [CBUtility getThemeColor2]//0x007AFF
 

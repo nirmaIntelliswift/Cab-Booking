@@ -58,25 +58,25 @@ static NSString *carCategoryCellIdentifier = @"carCategory";
 #pragma mark requests
 -(void)requestAllCabs{
     NSMutableDictionary *params = [ParameterBundler getAllCabsForLocation:pickUpLocation];
-    [self callRequestWithParameters:params requestId:API_ID_GET_ALL_CABS];
+    [self callRequestWithParameters:params requestId:API_ID_GET_ALL_CABS withLoader:NO];
 }
 
 -(void)requestRideEstimation{
     NSMutableDictionary *params = [ParameterBundler getRidesEstimationPickUpLocation:pickUpLocation toDestinationLocation:destinationLocation];
-    [self callRequestWithParameters:params requestId:API_ID_RIDE_ESTIMATE];
+    [self callRequestWithParameters:params requestId:API_ID_RIDE_ESTIMATE withLoader:NO];
 }
 -(void)requestConfirmRide{
      CBCarCategoryModel *cabCategory = [dataBookMyRide getSelectedCabCategory];
     NSMutableDictionary *params = [ParameterBundler getConfirmRidePickUpLocation:pickUpLocation toDestinationLocation:destinationLocation cabCategoryId:cabCategory.categoryId];
-    [self callRequestWithParameters:params requestId:API_ID_CONFIRM_RIDE];
+    [self callRequestWithParameters:params requestId:API_ID_CONFIRM_RIDE withLoader:NO];
 }
 -(void)requestCancelRide{
     NSMutableDictionary *params = [ParameterBundler getCancelRide:@"cc" reasonCode:10001];
-    [self callRequestWithParameters:params requestId:API_ID_CANCEL_RIDE];
+    [self callRequestWithParameters:params requestId:API_ID_CANCEL_RIDE withLoader:NO];
 }
 -(void)requestUpdatedLocation{
     NSMutableDictionary *params = [ParameterBundler getUpdatedLocation:@[]];
-    [self callRequestWithParameters:params requestId:API_ID_UPDATED_LOCATION];
+    [self callRequestWithParameters:params requestId:API_ID_UPDATED_LOCATION withLoader:NO];
     //[self performSelector:@selector(requestUpdatedLocation) withObject:nil afterDelay:10];
 }
 #pragma mark response delegate

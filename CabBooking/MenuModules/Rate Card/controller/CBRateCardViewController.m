@@ -18,8 +18,8 @@ static NSString *cellIdentifier = @"CELL";
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.title = TITLE_RATE_CARD;
+    [self addTableView];
     [self requestRateCard];
-     [self addTableView];
     // Do any additional setup after loading the view.
 }
 

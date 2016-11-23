@@ -34,6 +34,16 @@
                );
 }
 -(void)callRequestWithParameters:(NSMutableDictionary*)params
+                       requestId:(int)requestId
+                      withLoader:(BOOL)isLoaderShow{
+    if(isLoaderShow){
+        [self showLoader];
+    }
+    NetworkParser *business = [[NetworkParser alloc]init];
+    business.delegate = self;
+    [business sendRequestWithParams:params requestId:requestId];
+}
+-(void)callRequestWithParameters:(NSMutableDictionary*)params
                        requestId:(int)requestId{
     [self showLoader];
     NetworkParser *business = [[NetworkParser alloc]init];

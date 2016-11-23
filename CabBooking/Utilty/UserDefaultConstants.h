@@ -15,4 +15,6 @@
 #define USER_COLOR_THEME1 @"colorTheme1"
 #define USER_COLOR_THEME2 @"colorTheme2"
 
+#define USER_PROFILE_PHOTO @"userProfilePhoto"
+
 #endif /* UserDefaultConstants_h */

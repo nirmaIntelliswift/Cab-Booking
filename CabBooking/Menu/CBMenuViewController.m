@@ -62,7 +62,7 @@ static NSString *cellIdentifier = @"CELL";
     
     UITapGestureRecognizer *tapGesture  = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(openProfile)];
     self.viewHeaderView.imgUserPhoto.userInteractionEnabled = YES;
-    //[self.viewHeaderView.imgUserPhoto addGestureRecognizer:tapGesture];
+    [self.viewHeaderView.imgUserPhoto addGestureRecognizer:tapGesture];
     
 }
 -(void)updateHeader{
